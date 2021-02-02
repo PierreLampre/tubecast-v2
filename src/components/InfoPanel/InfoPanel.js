@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import TV_G from "./img/tvg-logo.png"
 import simmons from "./img/simmons.gif"
+import moment from "moment"
 import "./info-panel.css"
 
 const InfoPanel = () => {
+
+    const [time, setTime] = useState(moment()
+        .format("LT")
+        .toString()
+        .toLocaleLowerCase()
+        .replace(/\s/g, ""));
+
+    useEffect(() => {
+        let timerID = setInterval(() => tick(), 1000);
+
+        return function cleanup() {
+            clearInterval(timerID);
+        };
+    });
+
+    function tick() {
+        setTime(moment()
+            .format("LT")
+            .toString()
+            .toLocaleLowerCase()
+            .replace(/\s/g, ""));
+    };
+
+    let timeDigit = time.slice(0, 4);
+    let ampm = time.slice(4, 6)
+
+    if (timeDigit.slice(1, 2) !== ":") {
+        timeDigit = time.slice(0, 5);
+        ampm = time.slice(5, 7);
+    }
+
     return (
         <div className="info-panel-container">
             <div className="logo"><h1>Tubecast</h1></div>
@@ -11,7 +43,7 @@ const InfoPanel = () => {
                 <p>TV Listings</p>
                 <div className="clock-and-mail">
                     <p>*</p>
-                    <p>4:35am</p>
+                    <p>{timeDigit}{ampm}</p>
                 </div>
             </div>
             <div className="tv-guide">
