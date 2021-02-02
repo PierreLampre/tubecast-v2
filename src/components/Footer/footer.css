@@ -8,10 +8,8 @@
     justify-content: center;
 }
 
-.gif {
-    background: url("./img/hireme.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
+img {
     width: 80%;
-    height: 50%;
+    height: 80%;
+    object-fit: contain;
 }
