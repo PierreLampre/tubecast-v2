@@ -1,0 +1,57 @@
+.header-container {
+    background: var(--header-bg);
+    grid-row: 1 / 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--logo-text);
+    font-size: 1.8em;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.clock-box{
+    width: 35%;
+    height: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.clock-and-mail{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.clock-and-mail > p:nth-of-type(1) {
+    font-size: 1.4em;
+    margin-top: 4px;
+}
+
+.tv-guide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-guide > img {
+    width: 125px;
+}

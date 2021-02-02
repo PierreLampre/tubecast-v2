@@ -1,0 +1,41 @@
+.info-container {
+    background: var(--info-bg);
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.channel-and-program {
+    grid-row: 1 / 5;
+    grid-column: 1 / 8;
+    display: grid;
+    grid-template-rows: 75% 25%;
+}
+
+.info-program{
+    padding: 12px 20px;
+}
+
+.info-channel{
+    padding: 3px 20px;
+}
+
+.commercial {
+    grid-row: 1 / 5;
+    grid-column: 8 / 13;
+    background: url("https://thumbs.gfycat.com/WetAdeptAmericantoad-max-1mb.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurb-box {
+    grid-row: 5 / 9;
+    grid-column: 1 / 13;
+    letter-spacing: 2px;
+    padding: 30px 20px 10px 20px;
+}
