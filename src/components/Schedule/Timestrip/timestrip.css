@@ -46,3 +46,16 @@
 .time-3{
     grid-column: 4 / 5;
 }
+
+@media screen and (min-width: 1060px) {
+
+    .txt-box {
+        font-size: 1.1em;
+        height: 50%;
+    }
+
+    .timestrip-container {
+        align-items: center;
+    }
+
+}
