@@ -5,7 +5,7 @@ import moment from "moment";
 import channelStrings from "../../channelStrings.json"
 import "./schedule.css";
 
-const Schedule = () => {
+const Schedule = (props) => {
 
     const programSchedule = channelStrings;
 
@@ -39,6 +39,10 @@ const Schedule = () => {
         ampm = time.slice(5, 7);
     }
 
+    function passId(id) {
+        props.passId(id)
+    }
+
     return (
         <div className="schedule-container">
             <Timestrip
@@ -49,6 +53,7 @@ const Schedule = () => {
                 timeDigit={timeDigit}
                 ampm={ampm}
                 programSchedule={programSchedule}
+                passIdSched={passId}
             />
         </div>
     )

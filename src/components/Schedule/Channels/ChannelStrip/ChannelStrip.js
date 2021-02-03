@@ -1,33 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-import moment from "moment";
 import "./channel-strip.css"
 
-const ChannelStrip = ({ name, schedule, timeDigit, ampm }) => {
-
-    //bring in the clock
-
-    const [time, setTime] = useState(moment()
-        .format("LT")
-        .toString()
-        .toLocaleLowerCase()
-        .replace(/\s/g, ""));
-
-    useEffect(() => {
-        let timerID = setInterval(() => tick(), 1000);
-
-        return function cleanup() {
-            clearInterval(timerID);
-        };
-    });
-
-    function tick() {
-        setTime(moment()
-            .format("LT")
-            .toString()
-            .toLocaleLowerCase()
-            .replace(/\s/g, ""));
-    };
+const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
@@ -55,6 +30,12 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm }) => {
     let first30 = "block one-30"
     let second30 = "block two-30"
 
+    //lift up the proper video ID onClick
+
+    function passId(id) {
+        passIdChann(id);
+    }
+
     return (
         <div className="channel-strip-container">
             <div className="name">
@@ -69,6 +50,7 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm }) => {
                         :
                         defaultClass.concat("-1")
                 }
+                onClick={() => passId(firstBlock[0].id)}
             >
                 <h4>{firstBlock[0].name}</h4>
             </Link>
@@ -80,6 +62,7 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm }) => {
                         :
                         defaultClass.concat("-2")
                 }
+                onClick={() => passId(secondBlock[0].id)}
             >
                 <h4>{secondBlock[0].name}</h4>
             </Link>
