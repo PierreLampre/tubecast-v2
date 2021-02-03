@@ -1,0 +1,577 @@
+{
+    "_comment": "All channels arrays are imagined to begin at 6am and run through 24hrs.",
+    "blurbs": {
+        "drama": {
+            "channelText": "916 YESDrama",
+            "channelBlurb": "Get lost in someone else's problems for a while with YESDrama.  Only the most compelling..."
+        },
+        "mystery": {
+            "channelText": "917 Mystery!",
+            "channelBlurb": "There are strange happenings afoot and someone has to find the truth.  Watch unlikely citi..."
+        },
+        "mst3k": {
+            "channelText": "918 MST3K",
+            "channelBlurb": "There's a bad movie on in the Satellite of Love and the gang has something to say about it."
+        },
+        "foodie": {
+            "channelText": "919 Foodie",
+            "channelBlurb": "Learn how to make better food in your home or simply drool over tasty creations. Also maybe..."
+        },
+        "ion": {
+            "channelText": "4 ION",
+            "channelBlurb": "Tristar Products Incorporated proudly presents the Power Air Fryer XL. Healthy fried food...",
+            "programName": "Paid Programming"
+        }
+    },
+    "channels": {
+        "drama":[
+            {
+                "timeSlot": "6am",
+                "name": "Touched By An Angel",
+                "id": "ada-g5HGKhY"
+            },
+            {
+                "timeSlot": "7am",
+                "name": "Dr. Quinn, Medicine Woman",
+                "id": "Bpp5TMsw0Lg"
+            },
+            {
+                "timeSlot": "8am",
+                "name": "Doogie Howser, M.D.",
+                "id": "tBoQfID-8Nw",
+                "length": false
+            },
+            {
+                "timeSlot": "9am",
+                "name": "Early Edition",
+                "id": "TNv-W2AtpOY"
+            },
+            {
+                "timeSlot": "10am",
+                "name": "Judging Amy",
+                "id": "r-0MZNqF_ZE"
+            },
+            {
+                "timeSlot": "11am",
+                "name": "Chicago Hope",
+                "id": "Px_92lwee1w"
+            },
+            {
+                "timeSlot": "12pm",
+                "name": "The President's Man (**)",
+                "id": "DitvQvjduMk"
+            },
+            {
+                "timeSlot": "1pm",
+                "name": "Law and Order: SVU",
+                "id": "r8vYEslFiME"
+            },
+            {
+                "timeSlot": "2pm",
+                "name": "Timecop",
+                "id": "kx3uGgEMEVM"
+            },
+            {
+                "timeSlot": "3pm",
+                "name": "Blacklist",
+                "id": "avUG2TvP15w"
+            },
+            {
+                "timeSlot": "4pm",
+                "name": "The Adventures of Sherlock Holmes",
+                "id": "LKkcfkHq8pk"
+            },
+            {
+                "timeSlot": "5pm",
+                "name": "Nash Bridges",
+                "id": "0IdI_mtgZQY"
+            },
+            {
+                "timeSlot": "6pm",
+                "name": "The Practice",
+                "id": "ydZAQbBMjvI"
+            },
+            {
+                "timeSlot": "7pm",
+                "name": "Homicide: Life On The Street",
+                "id": "g4OLMnXJbfM"
+            },
+            {
+                "timeSlot": "8pm",
+                "name": "NYPD Blue",
+                "id": "_mhIjE4xQ1A"
+            },
+            {
+                "timeSlot": "9pm",
+                "name": "Dawson's Creek",
+                "id": "m52MBSE5XWI"
+            },
+            {
+                "timeSlot": "10pm",
+                "name": "The X-Files",
+                "id": "ov_ybVRTH90"
+            },
+            {
+                "timeSlot": "11pm",
+                "name": "Hill St Blues",
+                "id": "CHV0oeb_RAM"
+            },
+            {
+                "timeSlot": "12am",
+                "name": "Baywatch",
+                "id": "ZQTOW6r7SNE"
+            },
+            {
+                "timeSlot": "1am",
+                "name": "Macgyver: Through The Eyes of a Killer",
+                "id": "Enevxnnn114"
+            },
+            {   
+                "timeSlot": "2am",
+                "name": "St. Elsewhere",
+                "id": "ksQIQXPFkhs"
+            },
+            {
+                "timeSlot": "3am",
+                "name": "The Outer Limits",
+                "id": "OBkV2pAwy-U"
+            },
+            {
+                "timeSlot": "4am",
+                "name": "The Commish",
+                "id": "V0OMLpykGQo"
+            },
+            {
+                "timeSlot": "5am",
+                "name": "Fantasy Island",
+                "id": "rMzQ2wxA_Nk"
+            }
+        ],
+        "mystery": [
+            {
+                "timeSlot": "6am",
+                "name": "A Talent for Murder",
+                "id": "1sCI8nhlLlg"
+            },
+            {
+                "timeSlot": "7am",
+                "name": "Castle",
+                "id": "vh3RqzzJRno"
+            },
+            {
+                "timeSlot": "8am",
+                "name": "Marple",
+                "id": "KzyJeV51fMo"
+            },
+            {
+                "timeSlot": "9am",
+                "name": "Poirot",
+                "id": "5h59IREae6g"
+            },
+            {
+                "timeSlot": "10am",
+                "name": "Matlock",
+                "id": "UTVOiP8MwX4"
+            },
+            {
+                "timeSlot": "11am",
+                "name": "Perry Mason",
+                "id": "_0ohjUt4S_8"
+            },
+            {
+                "timeSlot": "12pm",
+                "name": "AHP: House Guest",
+                "id": "jkVShDg6Zz0"
+            },
+            {
+                "timeSlot": "1pm",
+                "name": "In Broad Daylight",
+                "id": "tVMcLffeL6s"
+            },
+            {
+                "timeSlot": "2pm",
+                "name": "Castle",
+                "id": "6tDhUtoUJxk"
+            },
+            {
+                "timeSlot": "3pm",
+                "name": "Marple",
+                "id": "CxVb5QYqopQ"
+            },
+            {
+                "timeSlot": "4pm",
+                "name": "Poirot",
+                "id": "Z9zssnuNBwI"
+            },
+            {
+                "timeSlot": "5pm",
+                "name": "Matlock",
+                "id": "79CVjChyDhs"
+            },
+            {
+                "timeSlot": "6pm",
+                "name": "Perry Mason",
+                "id": "hXLg6WOARUQ"
+            },
+            {
+                "timeSlot": "7pm",
+                "name": "Inspector Morse",
+                "id": "uj3W8nn7cX0"
+            },
+            {
+                "timeSlot": "8pm",
+                "name": "Inspector George Gently",
+                "id": "dA4xyJFCXVw"
+            },
+            {
+                "timeSlot": "9pm",
+                "name": "Diagnosis Murder",
+                "id": "UDkvK1yQVAY"
+            },
+            {
+                "timeSlot": "10pm",
+                "name": "Murder By Natural Causes",
+                "id": "qCoGSRZShy8"
+            },
+            {
+                "timeSlot": "11pm",
+                "name": "Hart to Hart",
+                "id": "cQXwW6ddgLU"
+            },
+            {
+                "timeSlot": "12am",
+                "name": "Midsomer Murders",
+                "id": "m1UQ7PC-dRU"
+            },
+            {
+                "timeSlot": "1am",
+                "name": "AHP: One Of The Family",
+                "id": "wWW-ksIW9Wc"
+            },
+            {
+                "timeSlot": "2am",
+                "name": "Matlock",
+                "id": "bhFkqr6qp6E"
+            },
+            {
+                "timeSlot": "3am",
+                "name": "Poirot",
+                "id": "0UFBlrjhYJ8"
+            },
+            {
+                "timeSlot": "4am",
+                "name": "Father Brown",
+                "id": "h8C65IcJJyw"
+            },
+            {
+                "timeSlot": "5am",
+                "name": "Midsomer Murders",
+                "id": "EsQaiABBOFw"
+            }
+        ],
+        "mst3k": [
+            {            
+             "timeSlot": "6am",
+             "name": "The Things That Couldn't Die",
+             "id": "ZI5mWxIFVbc"   
+            },
+            {            
+                "timeSlot": "7am",
+                "name": "The Deadly Mantis",
+                "id": "ZOPbyqyf71A"   
+            },
+            {            
+                "timeSlot": "8am",
+                "name": "Track of the Moon Beast",
+                "id": "aIbMWzeGORQ"   
+            },
+            {            
+                "timeSlot": "9am",
+                "name": "Invasion of the Neptune Men",
+                "id": "hpVI7_xqZOw"   
+            },
+            {            
+                "timeSlot": "10am",
+                "name": "Boggy Creek II",
+                "id": "n4N_lf5Q3rU"   
+            },
+            {            
+                "timeSlot": "11am",
+                "name": "Eegah",
+                "id": "rCb5rLjtF-4"   
+            },
+            {            
+                "timeSlot": "12pm",
+                "name": "The Incredible Melting Man",
+                "id": "wWALN1cRFWM"   
+            },
+            {            
+                "timeSlot": "1pm",
+                "name": "Hobgoblins",
+                "id": "Mn36h2r4efo"   
+            },
+            {            
+                "timeSlot": "2pm",
+                "name": "I Accuse My Parents",
+                "id": "Vy2XsuT3MIA"   
+            },
+            {            
+                "timeSlot": "3pm",
+                "name": "Merlin's Shop of Mystical Wonders",
+                "id": "p8Q-RuAx4V4"   
+            },
+            {            
+                "timeSlot": "4pm",
+                "name": "Jack Frost",
+                "id": "CVpOaeBtr7w"   
+            },
+            {            
+                "timeSlot": "5pm",
+                "name": "Teenagers from Outer Space",
+                "id": "4a2_5dEqJ3Y"   
+            },
+            {            
+                "timeSlot": "6pm",
+                "name": "The Brute ",
+                "id": "Cndzocvb8VE"   
+            },
+            {            
+                "timeSlot": "7pm",
+                "name": "Future War",
+                "id": "so-vHyYjgZk"   
+            },
+            {            
+                "timeSlot": "8pm",
+                "name": "Pod People",
+                "id": "sCl2ZNkfnS8"   
+            },
+            {            
+                "timeSlot": "9pm",
+                "name": "Space Mutiny",
+                "id": "sa42pxJyq64"   
+            },
+            {            
+                "timeSlot": "10pm",
+                "name": "Manos Hands of Fate",
+                "id": "DnxVbGZNHSs"   
+            },
+            {            
+                "timeSlot": "11pm",
+                "name": "Mitchell",
+                "id": "vmNZwJTp9nM"   
+            },
+            {            
+                "timeSlot": "12am",
+                "name": "Night of the Blood Beast",
+                "id": "7_9KAxuOgKM"   
+            },
+            {            
+                "timeSlot": "1am",
+                "name": "Werewolf",
+                "id": "aNjki9uRZNE"   
+            },
+            {            
+                "timeSlot": "2am",
+                "name": "Cave Dwellers",
+                "id": "ZKO6M8heGU0"   
+            },
+            {            
+                "timeSlot": "3am",
+                "name": "Catalina Caper",
+                "id": "rAr3y1-e9Xc"   
+            },
+            {            
+                "timeSlot": "4am",
+                "name": "The Violent Years",
+                "id": "Nz4wxyFIAhE"   
+            },
+            {            
+                "timeSlot": "5am",
+                "name": "The Magic Sword",
+                "id": "yzhEnz2MhHI"   
+            }
+        ],
+        "foodie": [
+            {
+                "timeSlot": "6am",
+                "name": "Iron Chef",
+                "id": "P6uWcOiLRX4",
+                "length": false
+            },
+            {
+                "timeSlot": "7am",
+                "name": "Julia Child",
+                "id": "_gsgIRRb_Nw",
+                "length": false
+            },
+            {
+                "timeSlot": "8am",
+                "name": "Throwdown with Bobby Flay",
+                "id": "MIXKlcYnNOU",
+                "length": true
+            },
+            {
+                "timeSlot": "8:30am",
+                "name": "Throwdown with Bobby Flay",
+                "id": "QJben7ZTHh8",
+                "length": true
+            },
+            {
+                "timeSlot": "9am",
+                "name": "Kitchen Nightmares",
+                "id": "W5O7TRTpesM",
+                "length": false
+            },
+            {
+                "timeSlot": "10am",
+                "name": "Hell's Kitchen",
+                "id": "qRNz6GAYVr0",
+                "length": false
+            },
+            {
+                "timeSlot": "11am",
+                "name": "Emeril Live",
+                "id": "eylOhqj8xcQ",
+                "length": false
+            },
+            {
+                "timeSlot": "12pm",
+                "name": "Jamie Oliver",
+                "id": "msl_qVESwWc",
+                "length": true
+            },
+            {
+                "timeSlot": "12:30pm",
+                "name": "Jamie Oliver",
+                "id": "qRy8U-kKiak",
+                "length": true
+            },
+            {
+                "timeSlot": "1pm",
+                "name": "Master Chef",
+                "id": "dITNkUKpXtQ",
+                "length": false
+            },
+            {
+                "timeSlot": "2pm",
+                "name": "Diners, Drive-Ins and Dives",
+                "id": "QkqEf78xL-U",
+                "length": true
+            },
+            {
+                "timeSlot": "2:30pm",
+                "name": "Diners, Drive-Ins and Dives",
+                "id": "qVuLNdBgPCk",
+                "length": true
+            },
+            {
+                "timeSlot": "3pm",
+                "name": "MasterChef",
+                "id": "XTco_tUHy4k",
+                "length": false
+            },
+            {
+                "timeSlot": "4pm",
+                "name": "Iron Chef",
+                "id": "cNOu-l80J04",
+                "length": false
+            },
+            {
+                "timeSlot": "5pm",
+                "name": "Chopped",
+                "id": "YCBwtXhyDOg",
+                "length": false
+            },
+            {
+                "timeSlot": "6pm",
+                "name": "Throwdown with Bobby Flay",
+                "id": "yVp9QteuveQ",
+                "length": false
+            },
+            {
+                "timeSlot": "7pm",
+                "name": "Hell's Kitchen",
+                "id": "7W0lwJLDXdc",
+                "length": false
+            },
+            {
+                "timeSlot": "8pm",
+                "name": "MasterChef Junior",
+                "id": "nOOVwxbv9v8",
+                "length": false
+            },
+            {
+                "timeSlot": "9pm",
+                "name": "Iron Chef",
+                "id": "0-7ZQ9I4Iyc",
+                "length": false
+            },
+            {
+                "timeSlot": "10pm",
+                "name": "Hell's Kitchen",
+                "id": "AaUHS-kna3M",
+                "length": false
+            },
+            {
+                "timeSlot": "11pm",
+                "name": "Hot Ones - Gordon Ramsay",
+                "id": "U9DyHthJ6LA",
+                "length": true
+            },
+            {
+                "timeSlot": "11:30pm",
+                "name": "Hot Ones - Alton Brown",
+                "id": "T1-k7VYwsHg",
+                "length": true
+            },
+            {
+                "timeSlot": "12am",
+                "name": "Restaurant Impossible",
+                "id": "EC0ZZGLJNbg",
+                "length": false
+            },
+            {
+                "timeSlot": "1am",
+                "name": "Kid's Baking Championship",
+                "id": "e_JifGETIlo",
+                "length": false
+            },
+            {
+                "timeSlot": "2am",
+                "name": "Master Chef UK",
+                "id": "7LYKQ1VjdO0",
+                "length": false
+            },
+            {
+                "timeSlot": "3am",
+                "name": "Barefoot Contessa",
+                "id": "JFZE583fjIQ",
+                "length": true
+            },
+            {
+                "timeSlot": "3:30am",
+                "name": "Barefoot Contessa",
+                "id": "MeUT27tDQXE",
+                "length": true
+            },
+            {
+                "timeSlot": "4am",
+                "name": "Iron Chef",
+                "id": "Jq0rnRfZomo",
+                "length": false
+            },
+            {
+                "timeSlot": "5am",
+                "name": "Alton Brown's Top 10",
+                "id": "bTaTxsIFWrs",
+                "length": true
+            },
+            {
+                "timeSlot": "5am",
+                "name": "Anthony Bourdain: A Cook's Tour",
+                "id": "M_z3et0_5WU",
+                "length": true
+            }
+        ]
+    }
+}

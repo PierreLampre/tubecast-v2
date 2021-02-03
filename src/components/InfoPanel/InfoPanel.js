@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import TV_G from "./img/tvg-logo.png"
 import mail from "./img/mail.svg"
 import moment from "moment"
+import channelStrings from "../../channelStrings.json"
 import "./info-panel.css"
 
 const InfoPanel = () => {
+
+    const blurbs = channelStrings.blurbs;
 
     const [time, setTime] = useState(moment()
         .format("LT")

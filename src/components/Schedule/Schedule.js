@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Timestrip from "./Timestrip/Timestrip";
 import Channels from "./Channels/Channels";
 import moment from "moment";
+import channelStrings from "../../channelStrings.json"
 import "./schedule.css";
 
 const Schedule = () => {
+
+    const programSchedule = channelStrings;
 
     const [time, setTime] = useState(moment()
         .format("LT")
@@ -45,6 +48,7 @@ const Schedule = () => {
             <Channels
                 timeDigit={timeDigit}
                 ampm={ampm}
+                programSchedule={programSchedule}
             />
         </div>
     )
