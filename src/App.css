@@ -36,5 +36,6 @@
   height: 100vh;
   background: ghostwhite;
   margin: 0 auto;
+  grid-template-columns: auto;
   grid-template-rows: 37% 51% 12%;
 }

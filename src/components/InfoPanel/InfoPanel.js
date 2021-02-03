@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import TV_G from "./img/tvg-logo.png"
-import simmons from "./img/simmons.gif"
+import mail from "./img/mail.svg"
 import moment from "moment"
 import "./info-panel.css"
 
@@ -42,7 +42,7 @@ const InfoPanel = () => {
             <div className="clock-box">
                 <p>TV Listings</p>
                 <div className="clock-and-mail">
-                    <p>*</p>
+                    <img src={mail} alt="A letter in an envelope" />
                     <p>{timeDigit}{ampm}</p>
                 </div>
             </div>
@@ -54,7 +54,13 @@ const InfoPanel = () => {
                 <div className="info-channel">4 ION</div>
             </div>
             <div className="commercial">
-                <img src={simmons} alt="Richard Simmons dancing" />
+                <iframe
+                    title="A YouTube Iframe"
+                    className="yt"
+                    src="https://www.youtube.com/embed/KdEZ1lij8Fg?mute=1&controls=1&autoplay=1&loop=1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+                ></iframe>
             </div>
             <div className="blurb-box">
                 We're still not sure if we like the drugs, or if they like us.

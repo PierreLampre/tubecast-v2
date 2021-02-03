@@ -2,6 +2,8 @@
     width: 100%;
     height: 100%;
     display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(8, 1fr);
     background: var(--info-bg);
@@ -49,13 +51,17 @@
 .clock-and-mail{
     display: flex;
     width: 80%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.clock-and-mail > p:nth-of-type(1) {
-    font-size: 1.4em;
-    margin-top: 4px;
+.clock-and-mail > img {
+    width: 30px;
+    margin-right: 4px;
+}
+
+.clock-and-mail > p {
+    margin-top: 3px;
 }
 
 .tv-guide {
@@ -93,10 +99,9 @@
     grid-column: 7 / 13;
 }
 
-.commercial > img {
+.commercial > iframe {
     width: 100%;
     height: 100%;
-    object-fit: fill;
 }
 
 .blurb-box {
@@ -119,9 +124,9 @@
 
 .tv-guide {
     grid-column: 6 / 8;
-}
+} 
 
-.channel-and-program {
+.channel-and-program { 
     grid-column: 1 / 8;
     font-size: 1.3em;
 }
@@ -130,7 +135,7 @@
     font-size: 1.3em;
 }
 
-.commercial {
+ .commercial {
     grid-row: 1 / 6;
     grid-column: 8 / 13;
 }
@@ -179,6 +184,10 @@
     .commercial {
         grid-row: 1 / 9;
         grid-column: 7 / 13;
+    }
+
+    .commercial > iFrame {
+        height: 100%;
     }
 
 }
