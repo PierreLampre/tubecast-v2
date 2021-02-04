@@ -43,8 +43,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
         }
     }
 
-    console.log(thisHoursPrograms);
-
     let programElements = [];
 
     if (thisHoursPrograms.length === 2 && zeroOrThirty < 3) {
@@ -53,12 +51,14 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
                 _css={"block row-2-to-4"}
                 passId={passId}
                 id={thisHoursPrograms[0].id}
+                key={thisHoursPrograms[0].id}
                 name={thisHoursPrograms[0].name}
             />,
             <ProgramBlock
                 _css={"block row-4-to-5"}
                 passId={passId}
                 id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
                 name={thisHoursPrograms[1].name}
             />
         ]
@@ -68,12 +68,14 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
                 _css={"block row-2-to-3"}
                 passId={passId}
                 id={thisHoursPrograms[0].id}
+                key={thisHoursPrograms[0].id}
                 name={thisHoursPrograms[0].name}
             />,
             <ProgramBlock
                 _css={"block row-3-to-5"}
                 passId={passId}
                 id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
                 name={thisHoursPrograms[1].name}
             />
         ]
@@ -83,18 +85,21 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
                 _css={"block row-2-to-3"}
                 passId={passId}
                 id={thisHoursPrograms[0].id}
+                key={thisHoursPrograms[0].id}
                 name={thisHoursPrograms[0].name}
             />,
             <ProgramBlock
                 _css={"block row-3-to-4"}
                 passId={passId}
                 id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
                 name={thisHoursPrograms[1].name}
             />,
             <ProgramBlock
                 _css={"block row-4-to-5"}
                 passId={passId}
                 id={thisHoursPrograms[2].id}
+                key={thisHoursPrograms[2].id}
                 name={thisHoursPrograms[2].name}
             />
         ]
@@ -104,12 +109,14 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
                 _css={"block row-2-to-3"}
                 passId={passId}
                 id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
                 name={thisHoursPrograms[1].name}
             />,
             <ProgramBlock
                 _css={"block row-3-to-5"}
                 passId={passId}
                 id={thisHoursPrograms[2].id}
+                key={thisHoursPrograms[2].id}
                 name={thisHoursPrograms[2].name}
             />
         ]
