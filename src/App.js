@@ -12,7 +12,6 @@ function App() {
 
   function passId(id) {
     setYt_Id(id);
-    console.log("Hey, we have an id that came in: " + yt_id);
   }
 
   return (

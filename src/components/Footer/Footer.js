@@ -5,7 +5,13 @@ import "./footer.css";
 const Footer = () => {
     return (
         <div className="footer-container">
-            <img src={hire_me} alt="A gif begging someone to hire me."/>
+            <a
+                href="https://github.com/PierreLampre"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <img src={hire_me} alt="A gif begging someone to hire me." />
+            </a>
         </div>
     )
 }

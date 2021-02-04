@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import TV_G from "./img/tvg-logo.png"
 import mail from "./img/mail.svg"
+import hire_me from "../Footer/img/hireme.gif"
 import moment from "moment"
 import channelStrings from "../../channelStrings.json"
 import "./info-panel.css"
@@ -68,6 +69,15 @@ const InfoPanel = () => {
             <div className="blurb-box">
                 We're still not sure if we like the drugs, or if they like us.
                 But that won't stop us from dancin' off those pounds...
+            </div>
+            <div className="info-footer-container">
+                <a
+                    href="https://github.com/PierreLampre"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <img src={hire_me} alt="A gif begging someone to hire me." />
+                </a>
             </div>
         </div>
     )

@@ -21,11 +21,12 @@
     background: var(--programs-bg);
     border: 1px solid var(--programs-border);
     cursor: pointer;
-    display: grid;
-    align-items: center;
     padding-left: 12px;
     text-decoration: none;
     color: var(--main-text);
+    display: grid;
+    align-items: center;
+    justify-items: start;
 }
 
 .block:hover{
@@ -48,4 +49,6 @@
 .two-30 {
     grid-column: 3 / 5;
 }
+
+
 

@@ -9,8 +9,20 @@
     justify-content: center;
 }
 
+.footer-container > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
     width: 80%;
     height: 80%;
     object-fit: contain;
+}
+
+@media screen and (max-height: 670px) {
+    .footer-container {
+        display: none;
+    }
 }

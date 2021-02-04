@@ -112,6 +112,10 @@
     padding: 20px;
 }
 
+.info-footer-container {
+    display: none;
+}
+
 @media screen and (min-width: 660px) {
     
 .logo {
@@ -190,4 +194,76 @@
         height: 100%;
     }
 
+}
+
+@media screen and (max-height: 400px) {
+
+    .info-panel-container{
+        max-height: 300px;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;      
+    }
+
+    .commercial {
+        grid-row: 2 / 7;
+        grid-column: 1 / 13;
+    }
+
+    .logo {
+        grid-row: 1 / 2;
+        grid-column: 1 / 7;
+    }
+
+    .logo > h1 {
+        font-size: 1.5em;
+    }
+
+    .clock-box {
+        grid-row: 1 / 2;
+        grid-column: 7 / 10;
+    }
+
+    .clock-box > p {
+        font-size: 12px;
+    }
+
+    .clock-and-mail {
+        margin-bottom: 3px;
+    }
+
+    .clock-and-mail > img {
+        width: 14px;
+    }
+
+    .clock-and-mail > p {
+        font-size: 13px;
+    }
+
+    .tv-guide {
+        grid-row: 1 / 2;
+        grid-column: 10 / 13;
+    }
+
+    .channel-and-program{
+       display: none;
+    }
+
+    .blurb-box{
+       display: none;
+    }
+
+    .info-footer-container {
+        display: grid;
+        grid-row: 7 / 9;
+        grid-column: 1 / 13;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .info-footer-container > a{
+        display: grid;
+        height: 100%;
+        align-items: center;
+        justify-items: center;
+    }
 }

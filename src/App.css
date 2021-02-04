@@ -23,7 +23,7 @@
 
 .App {
   background: var(--base-bg);
-  width: 100%;
+  height: 100%;
   width: 100%;
   color: var(--main-text);
   font-family: 'Hind', sans-serif;
@@ -34,8 +34,27 @@
   width: 90vw;
   max-width: 1060px;
   height: 100vh;
+  min-height: 758px;
   background: ghostwhite;
   margin: 0 auto;
   grid-template-columns: auto;
   grid-template-rows: 37% 51% 12%;
+}
+
+@media screen and (max-height: 400px) {
+
+  .App {
+    height: 400px;
+  }
+
+  .master-grid {
+    max-height: 300px;
+    min-height: 300px;
+    height: 300px;
+    background: var(--base-bg);
+    max-width: 1376px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 300px;
+  }
+
 }

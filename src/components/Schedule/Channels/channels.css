@@ -23,3 +23,9 @@
     }
 
 }
+
+@media screen and (max-height: 400px) {
+    .channels-container{
+        font-size: 1em;
+    }
+}
