@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import ProgramBlock from "./ProgramBlock"
 import "./channel-strip.css"
 
 const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
@@ -13,22 +13,107 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
     let hour = parseInt(timeDigit.slice(0, 1));
     let zeroOrThirty = timeDigit.slice(2, 3);
 
+    //should you want to spoof the clock...
+    // hour = 3;
+    // zeroOrThirty = 4;
+    // ampm = "am"
+
     if (timeDigit.slice(1, 2) !== ":") {
         hour = timeDigit.slice(0, 2);
         zeroOrThirty = timeDigit.slice(3, 4);
     }
 
-    let firstBlock = schedule.filter(
-        (program) => program.timeSlot === hour + ampm
-    );
+    //define current programming for channel
+    let thisHoursPrograms = [];
 
-    let secondBlock = schedule.filter(
-        (program) => program.timeSlot === (hour + 1) + ampm
-    )
+    let firstProgram = hour + ampm;
+    let secondProgram = hour + ":30" + ampm;
+    let thirdProgram = hour + 1 + ampm;
+    let ifSecondProgramIs30Min = hour + 1 + ":30" + ampm;
 
-    let defaultClass = "block program"
-    let first30 = "block one-30"
-    let second30 = "block two-30"
+    for (let i = 0; i < schedule.length; i++) {
+        if (schedule[i].timeSlot === firstProgram
+            ||
+            schedule[i].timeSlot === secondProgram
+            ||
+            schedule[i].timeSlot === thirdProgram
+            ||
+            schedule[i].timeSlot === ifSecondProgramIs30Min) {
+            thisHoursPrograms.push(schedule[i]);
+        }
+    }
+
+    console.log(thisHoursPrograms);
+
+    let programElements = [];
+
+    if (thisHoursPrograms.length === 2 && zeroOrThirty < 3) {
+        programElements = [
+            <ProgramBlock
+                _css={"block row-2-to-4"}
+                passId={passId}
+                id={thisHoursPrograms[0].id}
+                name={thisHoursPrograms[0].name}
+            />,
+            <ProgramBlock
+                _css={"block row-4-to-5"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />
+        ]
+    } else if (thisHoursPrograms.length === 2 && zeroOrThirty >= 3) {
+        programElements = [
+            <ProgramBlock
+                _css={"block row-2-to-3"}
+                passId={passId}
+                id={thisHoursPrograms[0].id}
+                name={thisHoursPrograms[0].name}
+            />,
+            <ProgramBlock
+                _css={"block row-3-to-5"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />
+        ]
+    } else if (thisHoursPrograms.length === 3 && zeroOrThirty < 3) {
+        programElements = [
+            <ProgramBlock
+                _css={"block row-2-to-3"}
+                passId={passId}
+                id={thisHoursPrograms[0].id}
+                name={thisHoursPrograms[0].name}
+            />,
+            <ProgramBlock
+                _css={"block row-3-to-4"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />,
+            <ProgramBlock
+                _css={"block row-4-to-5"}
+                passId={passId}
+                id={thisHoursPrograms[2].id}
+                name={thisHoursPrograms[2].name}
+            />
+        ]
+    } else {
+        programElements = [
+            <ProgramBlock
+                _css={"block row-2-to-3"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />,
+            <ProgramBlock
+                _css={"block row-3-to-5"}
+                passId={passId}
+                id={thisHoursPrograms[2].id}
+                name={thisHoursPrograms[2].name}
+            />
+        ]
+    }
 
     //lift up the proper video ID onClick
 
@@ -42,30 +127,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
                 <h4 className="number">{num}</h4>
                 <h4 className="title">{channel}</h4>
             </div>
-            <Link to="/pv"
-                className={
-                    zeroOrThirty >= 3
-                        ?
-                        first30
-                        :
-                        defaultClass.concat("-1")
-                }
-                onClick={() => passId(firstBlock[0].id)}
-            >
-                <h4>{firstBlock[0].name}</h4>
-            </Link>
-            <Link to="/pv"
-                className={
-                    zeroOrThirty >= 3
-                        ?
-                        second30
-                        :
-                        defaultClass.concat("-2")
-                }
-                onClick={() => passId(secondBlock[0].id)}
-            >
-                <h4>{secondBlock[0].name}</h4>
-            </Link>
+            {programElements.map(
+                program => program
+            )}
         </div>
     )
 }

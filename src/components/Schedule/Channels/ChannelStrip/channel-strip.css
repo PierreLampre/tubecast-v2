@@ -50,5 +50,30 @@
     grid-column: 3 / 5;
 }
 
+.first-block-30a {
+    grid-column: 2 / 3;
+}
 
+.first-block-30b {
+    grid-column: 3 / 4;
+}
 
+.row-2-to-3 {
+    grid-column: 2 / 3;
+}
+
+.row-2-to-4 {
+    grid-column: 2 / 4;
+}
+
+.row-3-to-4 {
+    grid-column: 3 / 4;
+}
+
+.row-3-to-5 {
+    grid-column: 3 / 5;
+}
+
+.row-4-to-5 {
+    grid-column: 4 / 5;
+}

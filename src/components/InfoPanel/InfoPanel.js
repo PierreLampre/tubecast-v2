@@ -54,7 +54,7 @@ const InfoPanel = () => {
                 <img src={TV_G} alt="" className="src" />
             </div>
             <div className="channel-and-program">
-                <div className="info-program">Richard Simmons: Dancin' To Manson</div>
+                <div className="info-program">Paid Programming</div>
                 <div className="info-channel">4 ION</div>
             </div>
             <div className="commercial">
@@ -67,8 +67,8 @@ const InfoPanel = () => {
                 ></iframe>
             </div>
             <div className="blurb-box">
-                We're still not sure if we like the drugs, or if they like us.
-                But that won't stop us from dancin' off those pounds...
+                Tristar Products proudly introduces the new Power Smokeless Grill Eric and Denise are back to
+                demonstrate the...
             </div>
             <div className="info-footer-container">
                 <a
