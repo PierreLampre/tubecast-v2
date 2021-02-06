@@ -2,10 +2,18 @@ import React from 'react'
 import ChannelStrip from "./ChannelStrip/ChannelStrip"
 import "./channels.css";
 
-const Channels = ({ passIdSched, programSchedule, timeDigit, ampm }) => {
+const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView, passOnDemandPrograms }) => {
 
     function passIdChann(id) {
         passIdSched(id);
+    }
+
+    function toggleTheViewChann() {
+        toggleTheView();
+    }
+
+    function sendProgramsChann(arr) {
+        passOnDemandPrograms(arr);
     }
 
     return (
@@ -16,6 +24,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm }) => {
                 timeDigit={timeDigit}
                 ampm={ampm}
                 passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
             />
             <ChannelStrip
                 name={programSchedule.blurbs.mystery}
@@ -23,6 +33,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm }) => {
                 timeDigit={timeDigit}
                 ampm={ampm}
                 passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
             />
             <ChannelStrip
                 name={programSchedule.blurbs.mst3k}
@@ -30,6 +42,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm }) => {
                 timeDigit={timeDigit}
                 ampm={ampm}
                 passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
             />
             <ChannelStrip
                 name={programSchedule.blurbs.foodie}
@@ -37,6 +51,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm }) => {
                 timeDigit={timeDigit}
                 ampm={ampm}
                 passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
             />
         </div>
     )

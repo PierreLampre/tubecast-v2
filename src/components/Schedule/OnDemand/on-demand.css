@@ -1,0 +1,48 @@
+.on-demand-container {
+    color: black;
+    background: var(--od-bg);
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+    overflow-y: scroll;
+}
+
+.od-button-box{
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+}
+
+.od-go-back {
+    border-radius: 8px;
+    background: var(--channel-bg);
+    color: var(--channel-text);
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.left {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    margin-right: 8px;
+}
+
+.right {
+    width: 100%;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    margin-left: 8px;
+}

@@ -19,6 +19,8 @@
   --programs-hover-text: #0a1528;
   --programs-hover-bg: #d3edc4;
   --footer-bg: linear-gradient(#006adc,#060e48);
+  --od-bg: #023eba;
+  --od-button-bg: #0094ef;
 }
 
 .App {

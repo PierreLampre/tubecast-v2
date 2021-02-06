@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-button {
+.programs-view-container > button {
     height: 48px;
     padding: 6px;
     border-radius: 8px;

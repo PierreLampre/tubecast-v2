@@ -2,7 +2,7 @@ import React from 'react'
 import ProgramBlock from "./ProgramBlock"
 import "./channel-strip.css"
 
-const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
+const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheView, sendPrograms }) => {
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
@@ -13,15 +13,15 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
     let hour = parseInt(timeDigit.slice(0, 1));
     let zeroOrThirty = timeDigit.slice(2, 3);
 
-    //should you want to spoof the clock...
-    // hour = 3;
-    // zeroOrThirty = 4;
-    // ampm = "am"
-
     if (timeDigit.slice(1, 2) !== ":") {
         hour = timeDigit.slice(0, 2);
         zeroOrThirty = timeDigit.slice(3, 4);
     }
+
+    //should you want to spoof the clock...
+    hour = 11;
+    zeroOrThirty = 0;
+    ampm = "am"
 
     //define current programming for channel
     let thisHoursPrograms = [];
@@ -30,6 +30,17 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
     let secondProgram = hour + ":30" + ampm;
     let thirdProgram = hour + 1 + ampm;
     let ifSecondProgramIs30Min = hour + 1 + ":30" + ampm;
+
+    //handle the errors that occur when both am and pm 
+    //programs need to share the same thisHoursPrograms
+
+    if (hour === 11 && ampm === "pm") {
+        thirdProgram = hour + 1 + "am"
+        ifSecondProgramIs30Min = hour + 1 + ":30am"
+    } else if (hour === 11 && ampm === "am") {
+        thirdProgram = hour + 1 + "pm"
+        ifSecondProgramIs30Min = hour + 1 + ":30pm"
+    }
 
     for (let i = 0; i < schedule.length; i++) {
         if (schedule[i].timeSlot === firstProgram
@@ -42,6 +53,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
             thisHoursPrograms.push(schedule[i]);
         }
     }
+
+    console.log(thisHoursPrograms)
 
     let programElements = [];
 
@@ -128,9 +141,21 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann }) => {
         passIdChann(id);
     }
 
+    function toggleTheViewChannStrip() {
+        toggleTheView();
+    }
+
+    function sendThePrograms(arr) {
+        sendPrograms(arr);
+        toggleTheViewChannStrip();
+    }
+
     return (
         <div className="channel-strip-container">
-            <div className="name">
+            <div
+                className="name"
+                onClick={() => sendThePrograms(schedule)}
+            >
                 <h4 className="number">{num}</h4>
                 <h4 className="title">{channel}</h4>
             </div>
