@@ -130,12 +130,12 @@
     grid-column: 6 / 8;
 } 
 
+.blurb-box {
+    font-size: 1.1em;
+}    
+
 .channel-and-program { 
     grid-column: 1 / 8;
-    font-size: 1.3em;
-}
-
-.blurb-box {
     font-size: 1.3em;
 }
 
@@ -143,6 +143,14 @@
     grid-row: 1 / 6;
     grid-column: 8 / 13;
 }
+
+}
+
+@media screen and (min-width: 790px) {
+
+.blurb-box {
+    font-size: 1.3em;
+}    
 
 }
 

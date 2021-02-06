@@ -8,6 +8,7 @@ const OnDemand = ({ programs, toggleTheView }) => {
     let justTheNames = [];
     let programsLeft = [];
     let programsRight = [];
+    let uniqueProgramObjects = [];
 
     for (let i = 0; i < programs.length; i++) {
         justTheNames.push(programs[i].name);
@@ -15,9 +16,20 @@ const OnDemand = ({ programs, toggleTheView }) => {
 
     let uniqueNames = [...new Set(justTheNames)];
 
+    uniqueNames = uniqueNames.sort();
+
+    uniqueProgramObjects = uniqueNames.map(name => (
+        {
+            "name": name,
+            "ids": []
+        }
+    ))
+
     for (let i = 0; i < uniqueNames.length; i++) {
+        //evens
         if (i % 2 === 0) {
             programsLeft.push(uniqueNames[i]);
+            //odds
         } else {
             programsRight.push(uniqueNames[i]);
         }
@@ -33,17 +45,17 @@ const OnDemand = ({ programs, toggleTheView }) => {
                     Go Back</button>
             </div>
             <div className="left">
-                {programsLeft.map(program => (
+                {programsLeft.map(programName => (
                     <OnDemandButton
-                        name={program}
+                        name={programName}
                         key={uniqid()}
                     />
                 ))}
             </div>
             <div className="right">
-                {programsRight.map(program => (
+                {programsRight.map(programName => (
                     <OnDemandButton
-                        name={program}
+                        name={programName}
                         key={uniqid()}
                     />
                 ))}

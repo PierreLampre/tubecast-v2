@@ -26,6 +26,7 @@
 .App {
   background: var(--base-bg);
   height: 100vh;
+  min-height: 670px;
   width: 100%;
   color: var(--main-text);
   font-family: 'Hind', sans-serif;

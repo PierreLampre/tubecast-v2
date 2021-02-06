@@ -180,7 +180,7 @@
             },
             {
                 "timeSlot": "12pm",
-                "name": "AHP: House Guest",
+                "name": "Alfred Hitchcock Presents",
                 "id": "jkVShDg6Zz0"
             },
             {
@@ -245,7 +245,7 @@
             },
             {
                 "timeSlot": "1am",
-                "name": "AHP: One Of The Family",
+                "name": "Alfred Hitchcock Presents",
                 "id": "wWW-ksIW9Wc"
             },
             {
@@ -514,13 +514,13 @@
             },
             {
                 "timeSlot": "11pm",
-                "name": "Hot Ones - Gordon Ramsay",
+                "name": "Hot Ones",
                 "id": "U9DyHthJ6LA",
                 "length": true
             },
             {
                 "timeSlot": "11:30pm",
-                "name": "Hot Ones - Alton Brown",
+                "name": "Hot Ones",
                 "id": "T1-k7VYwsHg",
                 "length": true
             },

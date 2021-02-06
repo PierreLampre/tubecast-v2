@@ -3,6 +3,7 @@ import TV_G from "./img/tvg-logo.png"
 import mail from "./img/mail.svg"
 import hire_me from "../Footer/img/hireme.gif"
 import moment from "moment"
+import { Link } from "react-router-dom"
 import "./info-panel.css"
 
 const InfoPanel = () => {
@@ -39,7 +40,7 @@ const InfoPanel = () => {
 
     return (
         <div className="info-panel-container">
-            <div className="logo"><h1>Tubecast</h1></div>
+            <div className="logo"><h1 className="main-logo">Tubecast</h1></div>
             <div className="clock-box">
                 <p>TV Listings</p>
                 <div className="clock-and-mail">
