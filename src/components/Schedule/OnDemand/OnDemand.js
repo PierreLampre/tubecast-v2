@@ -25,13 +25,21 @@ const OnDemand = ({ programs, toggleTheView }) => {
         }
     ))
 
-    for (let i = 0; i < uniqueNames.length; i++) {
+    for (let i = 0; i < programs.length; i++) {
+        for (let j = 0; j < uniqueProgramObjects.length; j++) {
+            if (programs[i].name === uniqueProgramObjects[j].name) {
+                uniqueProgramObjects[j].ids.push(programs[i].id)
+            }
+        }
+    }
+
+    for (let i = 0; i < uniqueProgramObjects.length; i++) {
         //evens
         if (i % 2 === 0) {
-            programsLeft.push(uniqueNames[i]);
+            programsLeft.push(uniqueProgramObjects[i].name);
             //odds
         } else {
-            programsRight.push(uniqueNames[i]);
+            programsRight.push(uniqueProgramObjects[i].name);
         }
     }
 

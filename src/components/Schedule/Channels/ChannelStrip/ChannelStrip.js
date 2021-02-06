@@ -19,9 +19,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
     }
 
     //should you want to spoof the clock...
-    // hour = 11;
-    // zeroOrThirty = 0;
-    // ampm = "am"
+    hour = 5;
+    zeroOrThirty = 0;
+    ampm = "am"
 
     //define current programming for channel
     let thisHoursPrograms = [];
@@ -42,6 +42,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
         ifSecondProgramIs30Min = hour + 1 + ":30pm"
     }
 
+    let problemChild;
+
     for (let i = 0; i < schedule.length; i++) {
         if (schedule[i].timeSlot === firstProgram
             ||
@@ -52,6 +54,13 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
             schedule[i].timeSlot === ifSecondProgramIs30Min) {
             thisHoursPrograms.push(schedule[i]);
         }
+    }
+
+    //the loop will find 6am first, because it is the first entry
+    //in every object. This fix maintains the integrity of the schedule
+    if (hour === 5 && thisHoursPrograms[0].timeSlot === "6am") {
+        problemChild = thisHoursPrograms.shift();
+        thisHoursPrograms.push(problemChild)
     }
 
     let programElements = [];
