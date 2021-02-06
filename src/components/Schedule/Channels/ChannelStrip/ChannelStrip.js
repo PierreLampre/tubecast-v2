@@ -1,5 +1,6 @@
 import React from 'react'
 import ProgramBlock from "./ProgramBlock"
+import { Link } from "react-router-dom"
 import "./channel-strip.css"
 
 const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheView, sendPrograms }) => {
@@ -19,9 +20,10 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
     }
 
     //should you want to spoof the clock...
-    hour = 5;
-    zeroOrThirty = 0;
-    ampm = "am"
+    //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
+    // hour = 2;
+    // zeroOrThirty = 3;
+    // ampm = "pm"
 
     //define current programming for channel
     let thisHoursPrograms = [];
@@ -123,6 +125,23 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
                 name={thisHoursPrograms[2].name}
             />
         ]
+    } else if (thisHoursPrograms.length === 3 && zeroOrThirty >= 3) {
+        programElements = [
+            <ProgramBlock
+                _css={"block row-2-to-3"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />,
+            <ProgramBlock
+                _css={"block row-3-to-5"}
+                passId={passId}
+                id={thisHoursPrograms[2].id}
+                key={thisHoursPrograms[2].id}
+                name={thisHoursPrograms[2].name}
+            />
+        ]
     } else {
         programElements = [
             <ProgramBlock
@@ -142,30 +161,28 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
         ]
     }
 
+    console.log(thisHoursPrograms)
+
     //lift up the proper video ID onClick
 
     function passId(id) {
         passIdChann(id);
     }
 
-    function toggleTheViewChannStrip() {
-        toggleTheView();
-    }
-
     function sendThePrograms(arr) {
         sendPrograms(arr);
-        toggleTheViewChannStrip();
     }
 
     return (
         <div className="channel-strip-container">
-            <div
+            <Link
+                to="/on-demand"
                 className="name"
                 onClick={() => sendThePrograms(schedule)}
             >
                 <h4 className="number">{num}</h4>
                 <h4 className="title">{channel}</h4>
-            </div>
+            </Link>
             {programElements.map(
                 program => program
             )}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Timestrip from "./Timestrip/Timestrip";
 import Channels from "./Channels/Channels";
 import OnDemand from "./OnDemand/OnDemand.js";
@@ -16,7 +17,6 @@ const Schedule = (props) => {
         .toLocaleLowerCase()
         .replace(/\s/g, ""));
 
-    const [viewToggle, setViewToggle] = useState(false);
     const [onDemandPrograms, setOnDemandPrograms] = useState([]);
 
     useEffect(() => {
@@ -47,45 +47,37 @@ const Schedule = (props) => {
         props.passId(id)
     }
 
-    function toggleTheView() {
-        if (!viewToggle) {
-            setViewToggle(true);
-        } else {
-            setViewToggle(false);
-        }
-    }
-
     function passOnDemandPrograms(arr) {
         setOnDemandPrograms(arr);
     }
 
     return (
         <div className="schedule-container">
-
-            {!viewToggle ?
-                <div className="default-schedule-container">
-                    <Timestrip
-                        timeDigit={timeDigit}
-                        ampm={ampm}
-                    />
-                    <Channels
-                        timeDigit={timeDigit}
-                        ampm={ampm}
-                        programSchedule={programSchedule}
-                        passIdSched={passId}
-                        toggleTheView={toggleTheView}
-                        passOnDemandPrograms={passOnDemandPrograms}
-                    />
-
-                </div>
-                :
-                <OnDemand
-                    toggleTheView={toggleTheView}
-                    programs={onDemandPrograms}
-                />
-            }
-
-
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/">
+                        <div className="default-schedule-container">
+                            <Timestrip
+                                timeDigit={timeDigit}
+                                ampm={ampm}
+                            />
+                            <Channels
+                                timeDigit={timeDigit}
+                                ampm={ampm}
+                                programSchedule={programSchedule}
+                                passIdSched={passId}
+                                passOnDemandPrograms={passOnDemandPrograms}
+                            />
+                        </div>
+                    </Route>
+                    <Route path="/on-demand">
+                        <OnDemand
+                            programs={onDemandPrograms}
+                            passId={passId}
+                        />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
         </div>
     )
 }

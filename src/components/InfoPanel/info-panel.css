@@ -22,7 +22,12 @@
     background: var(--header-bg);
 }
 
-.logo > h1 {
+.logo > a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-logo {
     font-family: 'Work Sans', sans-serif;
     color: var(--logo-text);
     font-size: 1.8em;

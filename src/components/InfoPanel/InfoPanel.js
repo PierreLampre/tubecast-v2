@@ -3,10 +3,9 @@ import TV_G from "./img/tvg-logo.png"
 import mail from "./img/mail.svg"
 import hire_me from "../Footer/img/hireme.gif"
 import moment from "moment"
-import { Link } from "react-router-dom"
 import "./info-panel.css"
 
-const InfoPanel = () => {
+const InfoPanel = ({ yt_id }) => {
 
     const [time, setTime] = useState(moment()
         .format("LT")
@@ -38,9 +37,18 @@ const InfoPanel = () => {
         ampm = time.slice(5, 7);
     }
 
+    let muteNumber = 0
+
+    //toggle mute on youtube embed by id
+    if (yt_id === "KdEZ1lij8Fg") {
+        muteNumber = 1
+    }
+
     return (
         <div className="info-panel-container">
-            <div className="logo"><h1 className="main-logo">Tubecast</h1></div>
+            <div className="logo">
+                <h1 className="main-logo">Tubecast</h1>
+            </div>
             <div className="clock-box">
                 <p>TV Listings</p>
                 <div className="clock-and-mail">
@@ -59,9 +67,9 @@ const InfoPanel = () => {
                 <iframe
                     title="A YouTube Iframe"
                     className="yt"
-                    src="https://www.youtube.com/embed/KdEZ1lij8Fg?mute=1&controls=1&autoplay=1&loop=1"
+                    src={`https://www.youtube.com/embed/${yt_id}?mute=${muteNumber}&controls=1&autoplay=1&loop=1&fs=1`}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+                    allow="accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture;"
                 ></iframe>
             </div>
             <div className="blurb-box">

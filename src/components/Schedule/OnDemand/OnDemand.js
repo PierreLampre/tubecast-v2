@@ -3,7 +3,7 @@ import OnDemandButton from "./OnDemandButton/OnDemandButton"
 import uniqid from "uniqid"
 import "./on-demand.css"
 
-const OnDemand = ({ programs, toggleTheView }) => {
+const OnDemand = ({ programs, toggleTheView, passId }) => {
 
     let justTheNames = [];
     let programsLeft = [];
@@ -36,35 +36,37 @@ const OnDemand = ({ programs, toggleTheView }) => {
     for (let i = 0; i < uniqueProgramObjects.length; i++) {
         //evens
         if (i % 2 === 0) {
-            programsLeft.push(uniqueProgramObjects[i].name);
+            programsLeft.push(uniqueProgramObjects[i]);
+
             //odds
         } else {
-            programsRight.push(uniqueProgramObjects[i].name);
+            programsRight.push(uniqueProgramObjects[i]);
         }
+    }
+
+    function passTheId(id) {
+        passId(id);
     }
 
     return (
         <div className="on-demand-container">
-            <div className="od-button-box">
-                <button
-                    className="od-go-back"
-                    onClick={() => toggleTheView()}
-                >
-                    Go Back</button>
-            </div>
             <div className="left">
-                {programsLeft.map(programName => (
+                {programsLeft.map(program => (
                     <OnDemandButton
-                        name={programName}
+                        name={program.name}
+                        ids={program.ids}
                         key={uniqid()}
+                        passId={passTheId}
                     />
                 ))}
             </div>
             <div className="right">
-                {programsRight.map(programName => (
+                {programsRight.map(program => (
                     <OnDemandButton
-                        name={programName}
+                        name={program.name}
+                        ids={program.ids}
                         key={uniqid()}
+                        passId={passTheId}
                     />
                 ))}
             </div>
