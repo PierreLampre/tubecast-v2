@@ -19,9 +19,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
     }
 
     //should you want to spoof the clock...
-    hour = 11;
-    zeroOrThirty = 0;
-    ampm = "am"
+    // hour = 11;
+    // zeroOrThirty = 0;
+    // ampm = "am"
 
     //define current programming for channel
     let thisHoursPrograms = [];
@@ -53,8 +53,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
             thisHoursPrograms.push(schedule[i]);
         }
     }
-
-    console.log(thisHoursPrograms)
 
     let programElements = [];
 
