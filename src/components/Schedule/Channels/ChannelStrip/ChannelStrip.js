@@ -161,8 +161,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
         ]
     }
 
-    console.log(thisHoursPrograms)
-
     //lift up the proper video ID onClick
 
     function passId(id) {

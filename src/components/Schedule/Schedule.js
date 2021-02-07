@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Timestrip from "./Timestrip/Timestrip";
 import Channels from "./Channels/Channels";
 import OnDemand from "./OnDemand/OnDemand.js";
+import EpisodeLibrary from "./OnDemand/EpisodeLibrary/EpisodeLibrary"
 import moment from "moment";
 import channelStrings from "../../channelStrings.json"
 import "./schedule.css";
@@ -18,6 +19,7 @@ const Schedule = (props) => {
         .replace(/\s/g, ""));
 
     const [onDemandPrograms, setOnDemandPrograms] = useState([]);
+    const [episodeList, setEpisodeList] = useState(null);
 
     useEffect(() => {
         let timerID = setInterval(() => tick(), 1000);
@@ -51,6 +53,10 @@ const Schedule = (props) => {
         setOnDemandPrograms(arr);
     }
 
+    function passEpisodeList(obj) {
+        setEpisodeList(obj);
+    }
+
     return (
         <div className="schedule-container">
             <BrowserRouter>
@@ -73,6 +79,13 @@ const Schedule = (props) => {
                     <Route path="/on-demand">
                         <OnDemand
                             programs={onDemandPrograms}
+                            passId={passId}
+                            passEpisodeList={passEpisodeList}
+                        />
+                    </Route>
+                    <Route path="/episode-library">
+                        <EpisodeLibrary
+                            episodeList={episodeList}
                             passId={passId}
                         />
                     </Route>

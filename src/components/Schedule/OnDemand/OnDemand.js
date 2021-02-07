@@ -3,12 +3,13 @@ import OnDemandButton from "./OnDemandButton/OnDemandButton"
 import uniqid from "uniqid"
 import "./on-demand.css"
 
-const OnDemand = ({ programs, toggleTheView, passId }) => {
+const OnDemand = ({ programs, passId, passEpisodeList }) => {
 
     let justTheNames = [];
+    let uniqueProgramObjects = [];
+    let programComponents = [];
     let programsLeft = [];
     let programsRight = [];
-    let uniqueProgramObjects = [];
 
     for (let i = 0; i < programs.length; i++) {
         justTheNames.push(programs[i].name);
@@ -33,42 +34,44 @@ const OnDemand = ({ programs, toggleTheView, passId }) => {
         }
     }
 
+    function passTheId(id) {
+        passId(id);
+    }
+
+    function passTheEpisodeList(obj) {
+        passEpisodeList(obj)
+    }
+
     for (let i = 0; i < uniqueProgramObjects.length; i++) {
+        programComponents.push(
+            <OnDemandButton
+                name={uniqueProgramObjects[i].name}
+                ids={uniqueProgramObjects[i].ids}
+                passId={passTheId}
+                passEpisodeList={passTheEpisodeList}
+                key={uniqid()}
+            />
+        );
+    }
+
+    for (let i = 0; i < programComponents.length; i++) {
         //evens
         if (i % 2 === 0) {
-            programsLeft.push(uniqueProgramObjects[i]);
+            programsLeft.push(programComponents[i]);
 
             //odds
         } else {
-            programsRight.push(uniqueProgramObjects[i]);
+            programsRight.push(programComponents[i]);
         }
-    }
-
-    function passTheId(id) {
-        passId(id);
     }
 
     return (
         <div className="on-demand-container">
             <div className="left">
-                {programsLeft.map(program => (
-                    <OnDemandButton
-                        name={program.name}
-                        ids={program.ids}
-                        key={uniqid()}
-                        passId={passTheId}
-                    />
-                ))}
+                {programsLeft.map(program => program)}
             </div>
             <div className="right">
-                {programsRight.map(program => (
-                    <OnDemandButton
-                        name={program.name}
-                        ids={program.ids}
-                        key={uniqid()}
-                        passId={passTheId}
-                    />
-                ))}
+                {programsRight.map(program => program)}
             </div>
         </div>
     )
