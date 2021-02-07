@@ -21,9 +21,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
 
     //should you want to spoof the clock...
     //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 2;
+    // hour = 11;
     // zeroOrThirty = 3;
-    // ampm = "pm"
+    // ampm = "am"
 
     //define current programming for channel
     let thisHoursPrograms = [];
@@ -33,15 +33,28 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
     let thirdProgram = hour + 1 + ampm;
     let ifSecondProgramIs30Min = hour + 1 + ":30" + ampm;
 
+    console.log(firstProgram)
+    console.log(secondProgram)
+    console.log(thirdProgram)
+    console.log(ifSecondProgramIs30Min)
+
     //handle the errors that occur when both am and pm 
     //programs need to share the same thisHoursPrograms
 
-    if (hour === 11 && ampm === "pm") {
+    if (hour === "11" && ampm === "pm") {
         thirdProgram = hour + 1 + "am"
         ifSecondProgramIs30Min = hour + 1 + ":30am"
-    } else if (hour === 11 && ampm === "am") {
+
+        console.log(thirdProgram, ifSecondProgramIs30Min)
+
+    } else if (hour === "11" && ampm === "am") {
         thirdProgram = hour + 1 + "pm"
         ifSecondProgramIs30Min = hour + 1 + ":30pm"
+    }
+
+    if (hour === "12") {
+        thirdProgram = "1am"
+        ifSecondProgramIs30Min = "1:30am"
     }
 
     let problemChild;
@@ -64,6 +77,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, toggleTheV
         problemChild = thisHoursPrograms.shift();
         thisHoursPrograms.push(problemChild)
     }
+
+    console.log(thisHoursPrograms)
 
     let programElements = [];
 

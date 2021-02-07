@@ -48,8 +48,8 @@
             },
             {
                 "timeSlot": "10am",
-                "name": "Judging Amy",
-                "id": "r-0MZNqF_ZE"
+                "name": "21 Jump St",
+                "id": "hzjNp1MvXH4"
             },
             {
                 "timeSlot": "11am",
@@ -171,7 +171,7 @@
             {
                 "timeSlot": "10am",
                 "name": "Matlock",
-                "id": "UTVOiP8MwX4"
+                "id": "aAa3rKH8W1k"
             },
             {
                 "timeSlot": "11am",
@@ -181,7 +181,7 @@
             {
                 "timeSlot": "12pm",
                 "name": "Alfred Hitchcock Presents",
-                "id": "jkVShDg6Zz0"
+                "id": "0ataCdw7vIo"
             },
             {
                 "timeSlot": "1pm",
@@ -206,7 +206,7 @@
             {
                 "timeSlot": "5pm",
                 "name": "Matlock",
-                "id": "79CVjChyDhs"
+                "id": "I3vSoOfP0i4"
             },
             {
                 "timeSlot": "6pm",
@@ -226,7 +226,7 @@
             {
                 "timeSlot": "9pm",
                 "name": "Diagnosis Murder",
-                "id": "UDkvK1yQVAY"
+                "id": "BQ_yzXIMrM8"
             },
             {
                 "timeSlot": "10pm",
@@ -236,7 +236,7 @@
             {
                 "timeSlot": "11pm",
                 "name": "Hart to Hart",
-                "id": "cQXwW6ddgLU"
+                "id": "NsROu_XRz3o"
             },
             {
                 "timeSlot": "12am",
@@ -246,12 +246,12 @@
             {
                 "timeSlot": "1am",
                 "name": "Alfred Hitchcock Presents",
-                "id": "wWW-ksIW9Wc"
+                "id": "9JCy3TwqLR0"
             },
             {
                 "timeSlot": "2am",
                 "name": "Matlock",
-                "id": "bhFkqr6qp6E"
+                "id": "dYOYaUHvsn0"
             },
             {
                 "timeSlot": "3am",
@@ -443,7 +443,7 @@
             {
                 "timeSlot": "12:30pm",
                 "name": "Jamie Oliver",
-                "id": "qRy8U-kKiak",
+                "id": "crZ70qHR2A0",
                 "length": true
             },
             {
@@ -478,8 +478,8 @@
             },
             {
                 "timeSlot": "5pm",
-                "name": "Chopped",
-                "id": "YCBwtXhyDOg",
+                "name": "Guy's Grocery Games",
+                "id": "7TW195zl1RY",
                 "length": false
             },
             {
@@ -533,7 +533,7 @@
             {
                 "timeSlot": "1am",
                 "name": "Kid's Baking Championship",
-                "id": "e_JifGETIlo",
+                "id": "JyLZOvRnJYw",
                 "length": false
             },
             {
