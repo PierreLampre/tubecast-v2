@@ -414,99 +414,129 @@
         ],
         "mst3k": [
             {            
-                "hour": "12pm",
+                "hour": 12,
+                "ampm": "pm",
+                "zOT": 0,
                 "name": "I Accuse My Parents",
                 "id": "Vy2XsuT3MIA",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "1:30pm",
+                "hour": 1,
+                "ampm": "pm",
+                "zOT": 3,
                 "name": "Merlin's Shop of Mystical Wonders",
                 "id": "p8Q-RuAx4V4",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "3pm",
+                "hour": 3,
+                "ampm": "pm",
+                "zOT": 0,
                 "name": "Jack Frost",
                 "id": "CVpOaeBtr7w",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "4:30pm",
+                "hour": 4,
+                "ampm": "pm",
+                "zOT": 3,
                 "name": "Teenagers from Outer Space",
                 "id": "4a2_5dEqJ3Y",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "6pm",
+                "hour": 6,
+                "ampm": "pm",
+                "zOT": 0,
                 "name": "The Brute ",
                 "id": "Cndzocvb8VE",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "7:30pm",
+                "hour": 7,
+                "ampm": "pm",
+                "zOT": 3,
                 "name": "Future War",
                 "id": "so-vHyYjgZk",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "9",
-                "zeroOrThirty": "0",
+                "hour": 9,
                 "ampm": "pm",
+                "zOT": 0,
                 "name": "Pod People",
                 "id": "sCl2ZNkfnS8",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "10:30pm",
+                "hour": 10,
+                "ampm": "pm",
+                "zOT": 0,
                 "name": "Space Mutiny",
                 "id": "sa42pxJyq64",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "12am",
+                "hour": 12,
+                "ampm": "am",
+                "zOT": 0,
                 "name": "Manos Hands of Fate",
                 "id": "DnxVbGZNHSs",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "1:30am",
+                "hour": 1,
+                "ampm": "am",
+                "zOT": 3,
                 "name": "Mitchell",
                 "id": "vmNZwJTp9nM",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "3am",
+                "hour": 3,
+                "ampm": "am",
+                "zOT": 0,
                 "name": "Night of the Blood Beast",
                 "id": "7_9KAxuOgKM",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "4:30am",
+                "hour": 4,
+                "ampm": "am",
+                "zOT": 3,
                 "name": "Werewolf",
                 "id": "aNjki9uRZNE",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "6am",
+                "hour": 6,
+                "ampm": "am",
+                "zOT": 0,
                 "name": "Boggy Creek II",
                 "id": "n4N_lf5Q3rU",
                 "length": "one-and-a-half-hours"   
             },
             {            
-                "hour": "7:30am",
+                "hour": 7,
+                "ampm": "am",
+                "zOT": 3,
                 "name": "Eegah",
                 "id": "rCb5rLjtF-4",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "9am",
+                "hour": 9,
+                "ampm": "am",
+                "zOT": 0,
                 "name": "The Incredible Melting Man",
                 "id": "wWALN1cRFWM",
                 "length": "one-and-a-half-hours"      
             },
             {            
-                "hour": "10:30am",
+                "hour": 10,
+                "ampm": "am",
+                "zOT": 3,
                 "name": "Hobgoblins",
                 "id": "Mn36h2r4efo",
                 "length": "one-and-a-half-hours"      

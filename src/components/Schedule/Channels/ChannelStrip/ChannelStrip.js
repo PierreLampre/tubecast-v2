@@ -21,9 +21,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
 
     //should you want to spoof the clock...do it here
     //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 11
-    // zeroOrThirty = 0
-    // ampm = "pm"
+    hour = 5
+    zeroOrThirty = 3
+    ampm = "am"
 
     //define current programming for channel
 
@@ -57,8 +57,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
         }
     }
 
-    //pushes the current hour and next hour's programs to thisHoursPrograms
-
     for (let i = 0; i < twelveHourBlock.length; i++) {
 
         if (twelveHourBlock[i].hour === hour || twelveHourBlock[i].hour === (hour + 1) ||
@@ -66,9 +64,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
             (twelveHourBlock[i].hour === (hour + 1) && twelveHourBlock[i].zOT === 3)) {
             thisHoursPrograms.push(twelveHourBlock[i]);
         }
-
-
     }
+
 
     //mutates array when hour === 11 to account for ampm differential of 11 and 12
     if (hour === 11 && ampm === "pm") {
@@ -111,7 +108,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
         }
         thisHoursPrograms = momentaryArray;
     }
-    console.log(thisHoursPrograms);
+
+    console.log(thisHoursPrograms)
 
     //creates arrays of components to load into schedule and defines conditions for use
     //threeHalfHours conditions
@@ -142,7 +140,28 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
             />
         ]
 
-        if (zeroOrThirty < 3 && thisHoursPrograms[0].length === "half-hour") {
+        let hourLeft_HalfHourRight = [
+            <ProgramBlock
+                _css={"block two-to-four"}
+                passId={passId}
+                id={thisHoursPrograms[0].id}
+                key={thisHoursPrograms[0].id}
+                name={thisHoursPrograms[0].name}
+            />,
+            <ProgramBlock
+                _css={"block four-to-five"}
+                passId={passId}
+                id={thisHoursPrograms[1].id}
+                key={thisHoursPrograms[1].id}
+                name={thisHoursPrograms[1].name}
+            />
+        ]
+
+        if (thisHoursPrograms[0].length === "one-hour" && zeroOrThirty < 3) {
+            programElements = hourLeft_HalfHourRight
+        } else if (thisHoursPrograms[0].length === "one-hour" && zeroOrThirty >= 3) {
+            programElements = threeHalfHours
+        } else if (zeroOrThirty < 3 && thisHoursPrograms[0].length === "half-hour") {
             programElements = threeHalfHours
         } else if ((zeroOrThirty >= 3 && thisHoursPrograms[0].length === "one-hour")) {
             programElements = threeHalfHours
@@ -194,8 +213,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
         }
 
     }
-
-    console.log(thisHoursPrograms)
 
     //lift up the proper video ID onClick
 

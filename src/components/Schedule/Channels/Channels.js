@@ -36,7 +36,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView
                 toggleTheView={toggleTheViewChann}
                 sendPrograms={sendProgramsChann}
             />
-            {/* <ChannelStrip
+            <ChannelStrip
                 name={programSchedule.blurbs.mst3k}
                 schedule={programSchedule.channels.mst3k}
                 timeDigit={timeDigit}
@@ -44,7 +44,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView
                 passIdChann={passIdChann}
                 toggleTheView={toggleTheViewChann}
                 sendPrograms={sendProgramsChann}
-            /> */}
+            />
             <ChannelStrip
                 name={programSchedule.blurbs.foodie}
                 schedule={programSchedule.channels.foodie}
