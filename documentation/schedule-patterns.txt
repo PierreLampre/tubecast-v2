@@ -1,0 +1,293 @@
+On defining the schedule patterns.
+
+The schedule only shows a 1 and a 1/2 hour time block at a time to the user.
+Components are added and removed according to the clock, reflecting the next 
+hour and a half of programming accoeding to the current half hour.
+
+The schedule column grid is as follows
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3              4             5
+    | ____________ | ____________ | ___________ |
+
+If the program is a half hour program, it will only ever span 2 rows on the 
+schedule at any time. Here are the styling configurations for half hour programs.
+
+  a. 2 rows - Right, b. 2 rows - Center, c. 2 rows - Left
+
+    a. 2 rows - Right, 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3              4   Progam    5
+    | ____________ | ____________ | ___________ |
+
+    b. 2 rows - Center 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3   Program    4             5
+    | ____________ | ____________ | ___________ |
+
+    b. 2 rows - Left 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2   Program    3              4             5
+    | ____________ | ____________ | ___________ |
+
+Hour long programs have one of four styling configurations at any given time.
+
+  a. 2 rows - Right, b. 3 rows - Right, c. 3 rows - Left, d. 2 rows - Left
+
+    a. 2 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3              4   Program   5
+    | ____________ | ____________ | ___________ |
+
+    b. 3 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm ------- 6:30pm --|
+   Row            Row                          Row
+    2              3   Program                  5
+    | ____________ | __________________________ |
+
+    c. 3 rows - Left
+
+    | -- 5:30pm ------- 6:00pm -- | -- 6:30pm --|
+   Row                           Row           Row
+    2   Program                   4             5
+    | ___________________________ | ___________ |
+
+    d. 2 rows - Left 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2   Program    3              4             5
+    | ____________ | ____________ | ___________ |
+
+if hour and a half it will span as such through time
+
+a. 2 rows - Right, b. 3 rows - Right, c. 4 rows (full), d. 3 rows - Left, 
+e. 2 rows - Left
+
+  a. 2 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3              4   Program   5
+    | ____________ | ____________ | ___________ |
+
+    b. 3 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm ------- 6:30pm --|
+   Row            Row                          Row
+    2              3   Program                  5
+    | ____________ | __________________________ |
+
+    c. 4 rows (full)
+
+    | -- 5:30pm ------- 6:00pm ------- 6:30pm --|
+   Row                                         Row
+    2   Program                                 5
+    | _________________________________________ |
+
+    d. 3 rows - Left
+
+    | -- 5:30pm ------- 6:00pm -- | -- 6:30pm --|
+   Row                           Row           Row
+    2   Program                   4             5
+    | ___________________________ | ___________ |
+
+    e. 2 rows - Left 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2   Program    3              4             5
+    | ____________ | ____________ | ___________ |
+
+
+if two hours it will span as such through time
+
+a. 2 rows - Right, b. 3 rows - Right, c. 4 rows (full), d. 4 rows (full), 
+e. 3 rows - Left, f. 2 rows - Left
+
+    a. 2 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2              3              4   Program   5
+    | ____________ | ____________ | ___________ |
+
+    b. 3 rows - Right
+
+    | -- 5:30pm -- | -- 6:00pm ------- 6:30pm --|
+   Row            Row                          Row
+    2              3   Program                  5
+    | ____________ | __________________________ |
+
+    c. 4 rows (full) && d. 4 rows (full)
+
+    | -- 5:30pm ------- 6:00pm ------- 6:30pm --|
+   Row                                         Row
+    2   Program                                 5
+    | _________________________________________ |
+
+    e. 3 rows - Left
+
+    | -- 5:30pm ------- 6:00pm -- | -- 6:30pm --|
+   Row                           Row           Row
+    2   Program                   4             5
+    | ___________________________ | ___________ |
+
+    f. 2 rows - Left 
+
+    | -- 5:30pm -- | -- 6:00pm -- | -- 6:30pm --|
+   Row            Row            Row           Row
+    2   Program    3              4             5
+    | ____________ | ____________ | ___________ |
+
+
+-----------------------------------------------------------
+
+in the .css, we will require the following styling definitions
+
+4-to-5, 3-to-5, full, 2-to-4, 2-to-3...as follows
+
+.4-to-5 {
+    grid-column: 4 / 5;
+}
+
+.3-to-5 {
+    grid-column: 3 / 5;
+}
+
+.full {
+    grid-column: 2 / 5;
+}
+
+.2-to-4 {
+    grid-column: 2 / 4;
+}
+
+.2-to-3 {
+    grid-column: 2 / 3;
+}
+
+-----------------------------------------------------------
+
+Before anything else, we should divide the schedule into two.  Making an array for am
+and an array for pm.
+
+let current12HrBlockOfPrograms = []
+
+if(masterAM = "am") {
+    for (let i = 0; i < schedule.length; i++) {
+        if(schedule[i].ampm === "am") {
+            current12HrBlockOfPrograms.push(schedule[i]);
+        }
+    }
+} else {
+    for (let i = 0; i < schedule.length; i++) {
+        if(schedule[i].ampm === "pm") {
+            current12HrBlockOfPrograms.push(schedule[i]);
+        }
+    }
+}
+
+-----------------------------------------------------------
+
+Lets write if statements defining how programs of differing lengths will appear 
+in the UI over time
+
+First off, every program enters the exact same way. So we will lead with this 
+conditional.
+
+if(program.hour === hour + 1 && zeroOrThirty < 3) {
+    program.className = "4-to-5"
+}
+
+Every program also leaves the exact same way.  So we will end all our conditional 
+statements with this:
+
+else {
+    program.className = "2-to-3"
+}
+
+1. Half hour programs
+
+if(program.length === "half-hour") {
+
+    if (program.hour === hour + 1 && zeroOrThirty >= 3) {
+        program.className = "3-to-4"
+    } else {
+        program.className = "2-to-3"
+    }
+
+}
+
+2. Hour programs
+
+if(program.length === "one-hour") {
+
+    if(program.hour === hour + 1 && zeroOrThirty >= 3) {
+        program.className = "3-to-5"
+    } else if (program.hour === hour && zeroOrThirty < 3) {
+        program.className = "2-to-4"
+    } else {
+        program.className = "2-to-3"
+    }
+
+}
+
+3. Hour and a half programs
+
+if(program.length === "one-and-a-half-hours") { 
+
+    if(program.hour === hour + 1 && zeroOrThirty >= 3) {
+        program.className = "3-to-5"
+    } else if (program.hour === hour && zeroOrThirty < 3) {
+        program.className = "full"
+    } else if (program.hour === hour && zeroOrThirty >= 3) {
+        program.className = "2-to-4"
+    } else {
+        program.className = "2-to-3"
+    }
+
+}
+
+4. Two hour programs
+
+if(program.length === "two-hours") {
+
+    if(program.hour === hour + 1 && zeroOrThirty >= 3) {
+        program.className = "3-to-5"
+    } else if ((program.hour === hour && zeroOrThirty < 3) || (program.hour === hour && zeroOrThirty >= 3)) {
+        program.className = "full"
+    } else if (program.hour === hour - 1 && zeroOrThirty >= 3) {
+        program.className = "2-to-4"
+    } else {
+        program.className = "2-to-3"
+    }
+
+}
+
+Let's attempt to be professional and put all of this into one concise statement.
+
+let thisHoursPrograms = [];
+
+for (let i = 0; i < current12HrBlockOfPrograms.length; i++) {
+
+            let cond_css;
+            thisHoursPrograms.push(
+                <ProgramBlock
+                _css={""}
+                passId={passId}
+                id={current12HrBlockOfPrograms[i].id}
+                key={current12HrBlockOfPrograms[i].id}
+                name={current12HrBlockOfPrograms[i].name}
+            />);
+}
