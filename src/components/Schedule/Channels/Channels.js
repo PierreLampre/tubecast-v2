@@ -1,5 +1,6 @@
 import React from 'react'
 import ChannelStrip from "./ChannelStrip/ChannelStrip"
+import Mst3kChannelStrip from "./ChannelStrip/Mst3kChannelStrip"
 import "./channels.css";
 
 const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView, passOnDemandPrograms }) => {
@@ -36,7 +37,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView
                 toggleTheView={toggleTheViewChann}
                 sendPrograms={sendProgramsChann}
             />
-            <ChannelStrip
+            <Mst3kChannelStrip
                 name={programSchedule.blurbs.mst3k}
                 schedule={programSchedule.channels.mst3k}
                 timeDigit={timeDigit}

@@ -21,9 +21,9 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
 
     //should you want to spoof the clock...do it here
     //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    hour = 12
-    zeroOrThirty = 3
-    ampm = "am"
+    // hour = 10
+    // zeroOrThirty = 0
+    // ampm = "pm"
 
     //define current programming for channel
 
@@ -108,8 +108,6 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
         }
         thisHoursPrograms = momentaryArray;
     }
-
-    console.log(thisHoursPrograms)
 
     //creates arrays of components to load into schedule and defines conditions for use
     //threeHalfHours conditions
@@ -212,6 +210,19 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
             programElements = hourLeft_HalfHourRight
         }
 
+    }
+
+    if (thisHoursPrograms.length === 1) {
+        let full = [
+            <ProgramBlock
+                _css={"block full"}
+                passId={passId}
+                id={thisHoursPrograms[0].id}
+                key={thisHoursPrograms[0].id}
+                name={thisHoursPrograms[0].name}
+            />
+        ]
+        programElements = full
     }
 
     //lift up the proper video ID onClick

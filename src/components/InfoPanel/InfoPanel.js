@@ -68,9 +68,9 @@ const InfoPanel = ({ yt_id }) => {
                 <iframe
                     title="A YouTube Iframe"
                     className="yt"
-                    src={`https://www.youtube.com/embed/${yt_id}?mute=${muteNumber}&controls=1&autoplay=1&loop=1&fs=1`}
+                    src={`https://www.youtube.com/embed/${yt_id}?mute=${muteNumber}&controls=1&autoplay=1&fs=1&loop=1&playlist=${yt_id}`}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture;"
+                    allow="accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture; loop;"
                 ></iframe>
             </div>
             <div className="blurb-box">

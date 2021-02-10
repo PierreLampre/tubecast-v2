@@ -153,6 +153,10 @@ e. 3 rows - Left, f. 2 rows - Left
 
 -----------------------------------------------------------
 
+In seeing this, we realize that the views for the channel schedule will only be
+4 different configurations (see "if hour and a half" above)***FIX THIS***.  So we will write 
+conditionals that build each of those views accordingly.
+
 in the .css, we will require the following styling definitions
 
 4-to-5, 3-to-5, full, 2-to-4, 2-to-3...as follows

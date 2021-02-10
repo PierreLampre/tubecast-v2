@@ -31,7 +31,7 @@
                 "zOT": 0,
                 "name": "The President's Man (**)",
                 "id": "DitvQvjduMk",
-                "length": "two-hours"
+                "length": "one-hour"
             },
             {
                 "hour": 1,
@@ -39,7 +39,7 @@
                 "zOT": 0,
                 "name": "The President's Man (**)",
                 "id": "DitvQvjduMk",
-                "length": "two-hours"
+                "length": "one-hour"
             },
             {
                 "hour": 2,
@@ -416,98 +416,86 @@
             {            
                 "hour": 12,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "I Accuse My Parents",
                 "id": "Vy2XsuT3MIA",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 1,
+                "hour": 1.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Merlin's Shop of Mystical Wonders",
                 "id": "p8Q-RuAx4V4",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 3,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Jack Frost",
                 "id": "CVpOaeBtr7w",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 4,
+                "hour": 4.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Teenagers from Outer Space",
                 "id": "4a2_5dEqJ3Y",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 6,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "The Brute ",
                 "id": "Cndzocvb8VE",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 7,
+                "hour": 7.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Future War",
                 "id": "so-vHyYjgZk",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 9,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Pod People",
                 "id": "sCl2ZNkfnS8",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 10,
+                "hour": 10.5,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Space Mutiny",
                 "id": "sa42pxJyq64",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 12,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Manos Hands of Fate",
                 "id": "DnxVbGZNHSs",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 1,
+                "hour": 1.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Mitchell",
                 "id": "vmNZwJTp9nM",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 3,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Night of the Blood Beast",
                 "id": "7_9KAxuOgKM",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 4,
+                "hour": 4.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Werewolf",
                 "id": "aNjki9uRZNE",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 6,
@@ -515,15 +503,14 @@
                 "zOT": 0,
                 "name": "Boggy Creek II",
                 "id": "n4N_lf5Q3rU",
-                "length": "one-and-a-half-hours"   
+                "length": 1.5  
             },
             {            
-                "hour": 7,
+                "hour": 7.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Eegah",
                 "id": "rCb5rLjtF-4",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
                 "hour": 9,
@@ -531,15 +518,14 @@
                 "zOT": 0,
                 "name": "The Incredible Melting Man",
                 "id": "wWALN1cRFWM",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             },
             {            
-                "hour": 10,
+                "hour": 10.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Hobgoblins",
                 "id": "Mn36h2r4efo",
-                "length": "one-and-a-half-hours"      
+                "length": 1.5     
             }
         ],
         "foodie": [
