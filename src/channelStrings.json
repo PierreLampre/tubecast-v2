@@ -21,6 +21,9 @@
             "channelText": "4 ION",
             "channelBlurb": "Tristar Products Incorporated proudly presents the Power Air Fryer XL. Healthy fried food...",
             "programName": "Paid Programming"
+        },
+        "collegerock": {
+            "channelText": "920 CollegeRock"
         }
     },
     "channels": {
@@ -768,6 +771,29 @@
                 "name": "Emeril Live",
                 "id": "eylOhqj8xcQ",
                 "length": "one-hour"
+            }
+        ],
+        "CollegeRock" :[
+            {
+                "hour": 12,
+                "ampm": "pm",
+                "name": "Guster",
+                "id": "sxO1GELTjlo",
+                "length": 1                   
+            },
+            {
+                "hour": 1,
+                "ampm": "pm",
+                "name": "Dr Dog",
+                "id": "S3mivsCGQz8",
+                "length": 1                   
+            },
+            {
+                "hour": 2,
+                "ampm": "pm",
+                "name": "The Shins",
+                "id": "ECrC83COwhY",
+                "length": 1                   
             }
         ]
     }

@@ -3,7 +3,6 @@ import TV_G from "./img/tvg-logo.png"
 import mail from "./img/mail.svg"
 import hire_me from "../Footer/img/hireme.gif"
 import moment from "moment"
-import { Link } from "react-router-dom"
 import "./info-panel.css"
 
 const InfoPanel = ({ yt_id }) => {
