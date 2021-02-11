@@ -22,7 +22,7 @@
             "channelBlurb": "Tristar Products Incorporated proudly presents the Power Air Fryer XL. Healthy fried food...",
             "programName": "Paid Programming"
         },
-        "collegerock": {
+        "collegeRock": {
             "channelText": "920 CollegeRock"
         }
     },
@@ -568,8 +568,8 @@
                 "hour": 2,
                 "ampm": "pm",
                 "zOT": 3,
-                "name": "Diners, Drive-Ins and Dives",
-                "id": "qVuLNdBgPCk",
+                "name": "Man vs Food",
+                "id": "dHQZ9J6Q8oU",
                 "length": "half-hour"
             },
             {
@@ -773,7 +773,7 @@
                 "length": "one-hour"
             }
         ],
-        "CollegeRock" :[
+        "collegeRock" :[
             {
                 "hour": 12,
                 "ampm": "pm",
@@ -786,14 +786,168 @@
                 "ampm": "pm",
                 "name": "Dr Dog",
                 "id": "S3mivsCGQz8",
-                "length": 1                   
+                "length": 1.5                   
             },
             {
-                "hour": 2,
+                "hour": 2.5,
                 "ampm": "pm",
                 "name": "The Shins",
                 "id": "ECrC83COwhY",
                 "length": 1                   
+            },
+            {
+                "hour": 3.5,
+                "ampm": "pm",
+                "name": "We Are Scientists",
+                "id": "cTjeUGK7RiU",
+                "length": 1                   
+            },
+            {
+                "hour": 4.5,
+                "ampm": "pm",
+                "name": "Julien Baker",
+                "id": "Tkot9YL3YyQ",
+                "length": 0.5                   
+            },
+            {
+                "hour": 5,
+                "ampm": "pm",
+                "name": "Radiohead",
+                "id": "DWuAn6C8Mfc",
+                "length": 1                   
+            },
+            {
+                "hour": 6,
+                "ampm": "pm",
+                "name": "The Killers",
+                "id": "TCAV5Yczw7g",
+                "length": 1                   
+            },
+            {
+                "hour": 7,
+                "ampm": "pm",
+                "name": "The Strokes",
+                "id": "NVowBqdnlSg",
+                "length": 1                   
+            },
+            {
+                "hour": 8,
+                "ampm": "pm",
+                "name": "Saves The Day",
+                "id": "YynTBPtBWUA",
+                "length": 1                   
+            },
+            {
+                "hour": 9,
+                "ampm": "pm",
+                "name": "Bad Religion",
+                "id": "8Zd2KEf-Qvs",
+                "length": 1                   
+            },
+            {
+                "hour": 10,
+                "ampm": "pm",
+                "name": "The Mars Volta",
+                "id": "Esi4ATorlqA",
+                "length": 1                   
+            },
+            {
+                "hour": 11,
+                "ampm": "pm",
+                "name": "Coheed And Cambria",
+                "id": "tz41IP-yGzo",
+                "length": 1                   
+            },
+            {
+                "hour": 12,
+                "ampm": "am",
+                "name": "Anberlin",
+                "id": "opL-0j3Djw",
+                "length": 1.5                   
+            },
+            {
+                "hour": 1.5,
+                "ampm": "am",
+                "name": "Thursday",
+                "id": "MCsKuJxDIBU",
+                "length": 1.5                  
+            },
+            {
+                "hour": 3,
+                "ampm": "am",
+                "name": "Captain Beefheart",
+                "id": "I7f7gBv0TjE",
+                "length": 0.5                   
+            },
+            {
+                "hour": 3.5,
+                "ampm": "am",
+                "name": "Ben Folds Tiny Desk",
+                "id": "VNMms_zGbnI",
+                "length": 0.5                   
+            },
+            {
+                "hour": 4,
+                "ampm": "am",
+                "name": "Band of Horses",
+                "id": "hx0tdOWTILQ",
+                "length": 1                   
+            },
+            {
+                "hour": 5,
+                "ampm": "am",
+                "name": "Catfish and the Bottlemen",
+                "id": "uhJv3BYH0zo",
+                "length": 1                   
+            },
+            {
+                "hour": 6,
+                "ampm": "am",
+                "name": "Biffy Clyro",
+                "id": "3JyDhcmfxD8",
+                "length": 1.5                   
+            },
+            {
+                "hour": 7.5,
+                "ampm": "am",
+                "name": "Foo Fighters Acoustic",
+                "id": "OUYwH87Y4FQ",
+                "length": 0.5                   
+            },
+            {
+                "hour": 8,
+                "ampm": "am",
+                "name": "Weezer Unplugged",
+                "id": "lm9X6_sSDus",
+                "length": 0.5                   
+            },
+            {
+                "hour": 8.5,
+                "ampm": "am",
+                "name": "Motion City Soundtrack",
+                "id": "mRIrAdTAtxg",
+                "length": 1                   
+            },
+            {
+                "hour": 9.5,
+                "ampm": "am",
+                "name": "Alkaline Trio",
+                "id": "oTdOcGTiyjQ",
+                "length": 1                   
+            },
+            {
+                "hour": 10.5,
+                "ampm": "am",
+                "name": "Jimmy Eat World",
+                "id": "8GMZrFTZNRE",
+                "length": 1                   
+            },
+            {
+                "hour": 11.5,
+                "ampm": "am",
+                "name": "Death Cab For Cutie",
+                "id": "3qgzkzt_yIo",
+                "length": 0.5                   
             }
         ]
     }

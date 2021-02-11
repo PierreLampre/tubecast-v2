@@ -3,7 +3,7 @@ import ProgramBlock from "./ProgramBlock"
 import { Link } from "react-router-dom"
 import "./channel-strip.css"
 
-const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms }) => {
+const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms }) => {
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
@@ -21,9 +21,9 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
 
     //should you want to spoof the clock...do it here
     // //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 5
-    // zeroOrThirty = 0
-    // ampm = "pm"
+    hour = 1
+    zeroOrThirty = 0
+    ampm = "am"
 
     if (zeroOrThirty >= 3) {
         hour = hour + .5
@@ -53,9 +53,9 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
         thisHoursPrograms.shift()
     }
 
-    if (hour === 12) {
+    if (hour === 12 || (hour === 12 && zeroOrThirty >= 3)) {
         thisHoursPrograms = [];
-        thisHoursPrograms = schedule.filter(program => program.hour === 12 || program.hour === 1.5 || program.hour === 3)
+        thisHoursPrograms = schedule.filter(program => program.hour === 12 || (program.hour > 0 && program.hour < 2))
 
         if (ampm === "am") {
             thisHoursPrograms = thisHoursPrograms.filter(program => (program.ampm === "am"))
@@ -67,8 +67,26 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
         }
     }
 
-    //creates arrays of components to load into schedule and defines conditions for use
-    //threeHalfHours conditions
+    if (hour === 1 || hour === 1.5) {
+        thisHoursPrograms = [];
+        thisHoursPrograms = schedule.filter(program => program.hour === 12 || (program.hour > 0 && program.hour < 3.5))
+        if (ampm === "am") {
+            thisHoursPrograms = thisHoursPrograms.filter(program => (program.ampm === "am"))
+        } else {
+            thisHoursPrograms = thisHoursPrograms.filter(program => (program.ampm === "pm"))
+        }
+    }
+
+    let allTheLengths = [];
+
+    for (let i = 0; i < thisHoursPrograms.length; i++) {
+        allTheLengths.push(thisHoursPrograms[i].length)
+    }
+
+    let currentLength = allTheLengths.reduce((a, b) => a + b, 0)
+    console.log(currentLength)
+
+    console.log(thisHoursPrograms)
 
     let full;
 
@@ -91,54 +109,6 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
         programElements = full
     }
 
-    if (thisHoursPrograms.length !== 1) {
-
-        let halfHourLeft_HourRight = [
-            <ProgramBlock
-                _css={"block two-to-three"}
-                passId={passId}
-                id={thisHoursPrograms[0].id}
-                key={thisHoursPrograms[0].id}
-                name={thisHoursPrograms[0].name}
-            />,
-            <ProgramBlock
-                _css={"block three-to-five"}
-                passId={passId}
-                id={thisHoursPrograms[1].id}
-                key={thisHoursPrograms[1].id}
-                name={thisHoursPrograms[1].name}
-            />
-        ]
-
-        let hourLeft_HalfHourRight = [
-            <ProgramBlock
-                _css={"block two-to-four"}
-                passId={passId}
-                id={thisHoursPrograms[0].id}
-                key={thisHoursPrograms[0].id}
-                name={thisHoursPrograms[0].name}
-            />,
-            <ProgramBlock
-                _css={"block four-to-five"}
-                passId={passId}
-                id={thisHoursPrograms[1].id}
-                key={thisHoursPrograms[1].id}
-                name={thisHoursPrograms[1].name}
-            />
-        ]
-
-        let length = thisHoursPrograms[0].length;
-
-
-        let difference = (length + thisHoursPrograms[0].hour) - hour;
-
-
-        if (difference === 1) {
-            programElements = hourLeft_HalfHourRight;
-        } else if (difference === .5) {
-            programElements = halfHourLeft_HourRight;
-        }
-    }
 
     //lift up the proper video ID onClick
 
@@ -167,4 +137,4 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
     )
 }
 
-export default Mst3kChannelStrip
+export default CRChannelStrip

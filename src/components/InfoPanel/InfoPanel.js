@@ -44,10 +44,13 @@ const InfoPanel = ({ yt_id }) => {
         muteNumber = 1
     }
 
+    let compLH = "http://localhost:3000"
+    let phoneLH = "10.0.0.60:3000"
+
     return (
         <div className="info-panel-container">
             <div className="logo">
-                <a href="http://localhost:3000"><h1 className="main-logo">Tubecast</h1></a>
+                <a href={compLH || phoneLH}><h1 className="main-logo">Tubecast</h1></a>
             </div>
             <div className="clock-box">
                 <p>TV Listings</p>

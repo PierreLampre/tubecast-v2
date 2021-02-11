@@ -1,6 +1,7 @@
 sxO1GELTjlo - guster 12pm
 S3mivsCGQz8 - dr dog 1pm
 ECrC83COwhY - the shins 2:30pm
+cTjeUGK7RiU - We Are Scientists 3:30pm
 Tkot9YL3YyQ - Julien Baker - 4:30pm
 DWuAn6C8Mfc - Radiohead - 5:00pm
 TCAV5Yczw7g - The Killers - 6:00pm

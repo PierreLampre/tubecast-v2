@@ -1,6 +1,7 @@
 import React from 'react'
 import ChannelStrip from "./ChannelStrip/ChannelStrip"
 import Mst3kChannelStrip from "./ChannelStrip/Mst3kChannelStrip"
+import CRChannelStrip from "./ChannelStrip/CRChannelStrip"
 import "./channels.css";
 
 const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView, passOnDemandPrograms }) => {
@@ -49,6 +50,15 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView
             <ChannelStrip
                 name={programSchedule.blurbs.foodie}
                 schedule={programSchedule.channels.foodie}
+                timeDigit={timeDigit}
+                ampm={ampm}
+                passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
+            />
+            <CRChannelStrip
+                name={programSchedule.blurbs.collegeRock}
+                schedule={programSchedule.channels.collegeRock}
                 timeDigit={timeDigit}
                 ampm={ampm}
                 passIdChann={passIdChann}

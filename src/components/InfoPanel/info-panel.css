@@ -218,7 +218,7 @@
     }
 
     .commercial {
-        grid-row: 2 / 7;
+        grid-row: 2 / 8;
         grid-column: 1 / 13;
     }
 
@@ -267,7 +267,7 @@
 
     .info-footer-container {
         display: grid;
-        grid-row: 7 / 9;
+        grid-row: 8 / 9;
         grid-column: 1 / 13;
         align-items: center;
         justify-items: center;
