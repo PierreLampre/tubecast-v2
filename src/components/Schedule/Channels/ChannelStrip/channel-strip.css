@@ -61,6 +61,12 @@
     grid-column: 2 / 5;
 }
 
+@media screen and (max-height: 723px) {
+    .channel-strip-container{
+    min-height: 108px;   
+    }
+}
+
 @media screen and (max-height: 400px) {
     .channel-strip-container{
     min-height: 88px;   

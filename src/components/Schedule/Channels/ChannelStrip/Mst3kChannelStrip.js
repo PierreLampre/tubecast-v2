@@ -21,9 +21,9 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
 
     //should you want to spoof the clock...do it here
     // //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 5
-    // zeroOrThirty = 0
-    // ampm = "pm"
+    // hour = 1
+    // zeroOrThirty = 3
+    // ampm = "am"
 
     if (zeroOrThirty >= 3) {
         hour = hour + .5
@@ -66,6 +66,8 @@ const Mst3kChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendP
             thisHoursPrograms.shift();
         }
     }
+
+    console.log(thisHoursPrograms)
 
     //creates arrays of components to load into schedule and defines conditions for use
     //threeHalfHours conditions
