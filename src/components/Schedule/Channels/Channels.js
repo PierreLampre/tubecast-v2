@@ -63,6 +63,33 @@ const Channels = ({ passIdSched, programSchedule, timeDigit, ampm, toggleTheView
                 toggleTheView={toggleTheViewChann}
                 sendPrograms={sendProgramsChann}
             />
+            <NewChannelStrip
+                name={programSchedule.blurbs.drama}
+                schedule={programSchedule.channels.drama}
+                timeDigit={timeDigit}
+                ampm={ampm}
+                passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
+            />
+            <NewChannelStrip
+                name={programSchedule.blurbs.mystery}
+                schedule={programSchedule.channels.mystery}
+                timeDigit={timeDigit}
+                ampm={ampm}
+                passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
+            />
+            <NewChannelStrip
+                name={programSchedule.blurbs.mst3k}
+                schedule={programSchedule.channels.mst3k}
+                timeDigit={timeDigit}
+                ampm={ampm}
+                passIdChann={passIdChann}
+                toggleTheView={toggleTheViewChann}
+                sendPrograms={sendProgramsChann}
+            />
         </div>
     )
 }

@@ -5,7 +5,15 @@
     display: grid;
     grid-column: 1 / 5;
     grid-template-columns: repeat(4, 25%);
+    animation: moveSlideshow 26s linear infinite;
 }
+
+@keyframes moveSlideshow {
+    100% { 
+      transform: translatey(-500%);  
+    }
+  }
+
 
 .name{
     grid-column: 1 / 2;
