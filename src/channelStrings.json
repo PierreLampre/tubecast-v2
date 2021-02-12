@@ -34,15 +34,15 @@
                 "zOT": 0,
                 "name": "The President's Man (**)",
                 "id": "DitvQvjduMk",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 1,
                 "ampm": "pm",
                 "zOT": 0,
-                "name": "The President's Man (**)",
+                "name": "Something",
                 "id": "DitvQvjduMk",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 2,
@@ -50,7 +50,7 @@
                 "zOT": 0,
                 "name": "Timecop",
                 "id": "kx3uGgEMEVM",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 3,
@@ -58,7 +58,7 @@
                 "zOT": 0,
                 "name": "Blacklist",
                 "id": "JuWAIkZcAS8",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 4,
@@ -66,7 +66,7 @@
                 "zOT": 0,
                 "name": "The Adventures of Sherlock Holmes",
                 "id": "LKkcfkHq8pk",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
@@ -74,7 +74,7 @@
                 "zOT": 0,
                 "name": "Nash Bridges",
                 "id": "0IdI_mtgZQY",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 6,
@@ -82,7 +82,7 @@
                 "zOT": 0,
                 "name": "The Practice",
                 "id": "ydZAQbBMjvI",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
@@ -90,7 +90,7 @@
                 "zOT": 0,
                 "name": "Homicide: Life On The Street",
                 "id": "g4OLMnXJbfM",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
@@ -98,7 +98,7 @@
                 "zOT": 0,
                 "name": "NYPD Blue",
                 "id": "_mhIjE4xQ1A",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 9,
@@ -106,7 +106,7 @@
                 "zOT": 0,
                 "name": "Dawson's Creek",
                 "id": "m52MBSE5XWI",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
@@ -114,7 +114,7 @@
                 "zOT": 0,
                 "name": "The X-Files",
                 "id": "ov_ybVRTH90",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
@@ -122,7 +122,7 @@
                 "zOT": 0,
                 "name": "Hill St Blues",
                 "id": "CHV0oeb_RAM",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 12,
@@ -130,7 +130,7 @@
                 "zOT": 0,
                 "name": "Baywatch",
                 "id": "ZQTOW6r7SNE",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 1,
@@ -138,7 +138,7 @@
                 "zOT": 0,
                 "name": "Macgyver: Through The Eyes of a Killer",
                 "id": "Enevxnnn114",
-                "length": "one-hour"
+                "length": 1
             },
             {   
                 "hour": 2,
@@ -146,7 +146,7 @@
                 "zOT": 0,
                 "name": "St. Elsewhere",
                 "id": "ksQIQXPFkhs",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 3,
@@ -154,7 +154,7 @@
                 "zOT": 0,
                 "name": "The Outer Limits",
                 "id": "OBkV2pAwy-U",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 4,
@@ -162,7 +162,7 @@
                 "zOT": 0,
                 "name": "The Commish",
                 "id": "V0OMLpykGQo",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
@@ -170,7 +170,7 @@
                 "zOT": 0,
                 "name": "Fantasy Island",
                 "id": "rMzQ2wxA_Nk",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 6,
@@ -178,7 +178,7 @@
                 "zOT": 0,
                 "name": "Touched By An Angel",
                 "id": "ada-g5HGKhY",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
@@ -186,7 +186,7 @@
                 "zOT": 0,
                 "name": "Dr. Quinn, Medicine Woman",
                 "id": "Bpp5TMsw0Lg",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
@@ -194,7 +194,7 @@
                 "zOT": 0,
                 "name": "Doogie Howser, M.D.",
                 "id": "tBoQfID-8Nw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 9,
@@ -202,7 +202,7 @@
                 "zOT": 0,
                 "name": "Early Edition",
                 "id": "TNv-W2AtpOY",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
@@ -210,7 +210,7 @@
                 "zOT": 0,
                 "name": "21 Jump St",
                 "id": "hzjNp1MvXH4",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
@@ -218,7 +218,7 @@
                 "zOT": 0,
                 "name": "Chicago Hope",
                 "id": "Px_92lwee1w",
-                "length": "one-hour"
+                "length": 1
             }
         ],
         "mystery": [
@@ -228,7 +228,7 @@
                 "zOT": 0,
                 "name": "Alfred Hitchcock Presents",
                 "id": "0ataCdw7vIo",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 1,
@@ -236,7 +236,7 @@
                 "zOT": 0,
                 "name": "In Broad Daylight",
                 "id": "tVMcLffeL6s",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 2,
@@ -244,7 +244,7 @@
                 "zOT": 0,
                 "name": "Castle",
                 "id": "6tDhUtoUJxk",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 3,
@@ -252,7 +252,7 @@
                 "zOT": 0,
                 "name": "Marple",
                 "id": "CxVb5QYqopQ",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 4,
@@ -260,7 +260,7 @@
                 "zOT": 0,
                 "name": "Poirot",
                 "id": "Z9zssnuNBwI",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
@@ -268,7 +268,7 @@
                 "zOT": 0,
                 "name": "Matlock",
                 "id": "I3vSoOfP0i4",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 6,
@@ -276,7 +276,7 @@
                 "zOT": 0,
                 "name": "Perry Mason",
                 "id": "hXLg6WOARUQ",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
@@ -284,7 +284,7 @@
                 "zOT": 0,
                 "name": "Inspector Morse",
                 "id": "uj3W8nn7cX0",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
@@ -292,7 +292,7 @@
                 "zOT": 0,
                 "name": "Inspector George Gently",
                 "id": "dA4xyJFCXVw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 9,
@@ -300,7 +300,7 @@
                 "zOT": 0,
                 "name": "Diagnosis Murder",
                 "id": "BQ_yzXIMrM8",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
@@ -308,7 +308,7 @@
                 "zOT": 0,
                 "name": "Murder By Natural Causes",
                 "id": "qCoGSRZShy8",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
@@ -316,7 +316,7 @@
                 "zOT": 0,
                 "name": "Hart to Hart",
                 "id": "NsROu_XRz3o",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 12,
@@ -324,7 +324,7 @@
                 "zOT": 0,
                 "name": "Midsomer Murders",
                 "id": "m1UQ7PC-dRU",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 1,
@@ -332,7 +332,7 @@
                 "zOT": 0,
                 "name": "Alfred Hitchcock Presents",
                 "id": "9JCy3TwqLR0",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 2,
@@ -340,7 +340,7 @@
                 "zOT": 0,
                 "name": "Matlock",
                 "id": "dYOYaUHvsn0",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 3,
@@ -348,7 +348,7 @@
                 "zOT": 0,
                 "name": "Poirot",
                 "id": "0UFBlrjhYJ8",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 4,
@@ -356,7 +356,7 @@
                 "zOT": 0,
                 "name": "Father Brown",
                 "id": "h8C65IcJJyw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
@@ -364,7 +364,7 @@
                 "zOT": 0,
                 "name": "Midsomer Murders",
                 "id": "EsQaiABBOFw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 6,
@@ -372,7 +372,7 @@
                 "zOT": 0,
                 "name": "A Talent for Murder",
                 "id": "1sCI8nhlLlg",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
@@ -380,7 +380,7 @@
                 "zOT": 0,
                 "name": "Castle",
                 "id": "vh3RqzzJRno",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
@@ -388,7 +388,7 @@
                 "zOT": 0,
                 "name": "Marple",
                 "id": "KzyJeV51fMo",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 9,
@@ -396,7 +396,7 @@
                 "zOT": 0,
                 "name": "Poirot",
                 "id": "5h59IREae6g",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
@@ -404,7 +404,7 @@
                 "zOT": 0,
                 "name": "Matlock",
                 "id": "aAa3rKH8W1k",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
@@ -412,7 +412,7 @@
                 "zOT": 0,
                 "name": "Perry Mason",
                 "id": "_0ohjUt4S_8",
-                "length": "one-hour"
+                "length": 1
             }
         ],
         "mst3k": [
@@ -535,106 +535,93 @@
             {
                 "hour": 12,
                 "ampm": "pm",
-                 "zOT": 0,
                 "name": "Jamie Oliver",
                 "id": "msl_qVESwWc",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
-                "hour": 12,
+                "hour": 12.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Jamie Oliver",
                 "id": "crZ70qHR2A0",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 1,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Master Chef",
                 "id": "dITNkUKpXtQ",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 2,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Diners, Drive-Ins and Dives",
                 "id": "QkqEf78xL-U",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
-                "hour": 2,
+                "hour": 2.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Man vs Food",
                 "id": "dHQZ9J6Q8oU",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 3,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Master Chef",
                 "id": "XTco_tUHy4k",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 4,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Iron Chef",
                 "id": "cNOu-l80J04",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Guy's Grocery Games",
                 "id": "7TW195zl1RY",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 6,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Throwdown with Bobby Flay",
                 "id": "yVp9QteuveQ",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Hell's Kitchen",
                 "id": "7W0lwJLDXdc",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "MasterChef Junior",
                 "id": "nOOVwxbv9v8",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 9,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Iron Chef",
                 "id": "0-7ZQ9I4Iyc",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
                 "ampm": "pm",
-                "zOT": 0,
                 "name": "Hell's Kitchen",
                 "id": "AaUHS-kna3M",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
@@ -642,135 +629,119 @@
                 "zOT": 0,
                 "name": "Hot Ones",
                 "id": "U9DyHthJ6LA",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
-                "hour": 11,
+                "hour": 11.5,
                 "ampm": "pm",
-                "zOT": 3,
                 "name": "Hot Ones",
                 "id": "T1-k7VYwsHg",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 12,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Restaurant Impossible",
                 "id": "EC0ZZGLJNbg",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 1,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Kid's Baking Championship",
                 "id": "JyLZOvRnJYw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 2,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Master Chef UK",
                 "id": "7LYKQ1VjdO0",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 3,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Barefoot Contessa",
                 "id": "JFZE583fjIQ",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
-                "hour": 3,
+                "hour": 3.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Barefoot Contessa",
                 "id": "MeUT27tDQXE",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 4,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Iron Chef",
                 "id": "Jq0rnRfZomo",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 5,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Alton Brown's Top 10",
                 "id": "bTaTxsIFWrs",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
-                "hour": 5,
+                "hour": 5.5,
                 "ampm": "am",
-                "zOT": 3,
                 "name": "Anthony Bourdain: A Cook's Tour",
                 "id": "M_z3et0_5WU",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 6,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Iron Chef",
                 "id": "P6uWcOiLRX4",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 7,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Julia Child",
                 "id": "_gsgIRRb_Nw",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 8,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Throwdown with Bobby Flay",
                 "id": "MIXKlcYnNOU",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 8,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Throwdown with Bobby Flay",
                 "id": "QJben7ZTHh8",
-                "length": "half-hour"
+                "length": 0.5
             },
             {
                 "hour": 9,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Kitchen Nightmares",
                 "id": "W5O7TRTpesM",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 10,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Hell's Kitchen",
                 "id": "qRNz6GAYVr0",
-                "length": "one-hour"
+                "length": 1
             },
             {
                 "hour": 11,
                 "ampm": "am",
-                "zOT": 0,
                 "name": "Emeril Live",
                 "id": "eylOhqj8xcQ",
-                "length": "one-hour"
+                "length": 1
             }
         ],
         "collegeRock" :[

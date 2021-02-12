@@ -21,14 +21,13 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
 
     //should you want to spoof the clock...do it here
     // //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 11
-    // zeroOrThirty = 3
+    // hour = 3
+    // zeroOrThirty = 0
     // ampm = "pm"
 
     if (zeroOrThirty >= 3) {
         hour = hour + .5
     }
-
 
     //define current programming for channel
 
@@ -60,13 +59,13 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
         }
 
         if (program.length !== .5) {
-            program.cssNext = "three-to-five"
+            program.cssNext = "block three-to-five"
         } else {
-            program.cssNext = "three-to-four"
+            program.cssNext = "block three-to-four"
         }
 
         program.timeNext = program.hour - .5
-        program.cssLast = "four-to-five"
+        program.cssLast = "block four-to-five"
         program.timeLast = program.hour - 1
 
         for (let i = 0; i < program.timesFirst.length; i++) {
@@ -85,7 +84,6 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
         programs.push(program);
     }
 
-    let onRightNow;
 
     function setProgramBlock(css, id, name) {
         let pb = <ProgramBlock
@@ -99,27 +97,49 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
         return pb;
     }
 
-    let nP11am;
-    let nP11pm;
-
-    for (let i = 0; i < programs.length; i++) {
-        if (programs[i].hour === 12 && programs[i].ampm === "pm") {
-            nP11am = programs[i];
-        } else if (programs[i].hour === 12 && programs[i].ampm === "am") {
-            nP11pm = programs[i];
-        }
-    }
+    let allPrograms = programs.map(program => program)
 
     programs = programs.filter(program => program.ampm === ampm)
 
+    // get the changeover timed programs when we need them.
+
+    let concatArr = [];
+
+    if (hour > 8 && hour < 12) {
+        if (ampm === "pm") {
+            programs = allPrograms.filter(program => (program.hour >= 5.5) && (program.ampm === "pm" && program.hour < 12))
+            concatArr = allPrograms.filter(program => (program.hour === 12 && program.ampm === "am") || (program.hour <= 6 && program.ampm === "am"))
+            programs = programs.concat(concatArr);
+        } else {
+            programs = allPrograms.filter(program => (program.hour >= 5.5) && (program.ampm === "am" && program.hour < 12))
+            concatArr = allPrograms.filter(program => (program.hour === 12 && program.ampm === "pm") || (program.hour <= 6 && program.ampm === "pm"))
+            programs = programs.concat(concatArr);
+        }
+    } else {
+        programs = programs.filter(program => program.ampm === ampm)
+    }
+
+    console.log(programs)
+
+    let onRightNow;
+    let onRightNowIndex;
 
     for (let i = 0; i < programs.length; i++) {
         for (let j = 0; j < programs[i].timesFirst.length; j++) {
             if (programs[i].timesFirst[j] === hour) {
+                onRightNowIndex = programs.indexOf(programs[i])
                 onRightNow = programs[i]
             }
         }
     }
+    let nextProgramIndex = onRightNowIndex + 1;
+    let nextProgram = programs[nextProgramIndex]
+    let lastProgramIndex = onRightNowIndex + 2;
+    let lastProgram = programs[lastProgramIndex]
+
+    console.log(onRightNow)
+    console.log(nextProgram)
+    console.log(lastProgram)
 
     function getCurrentCSS(obj) {
         let cssIndex = obj.timesFirst.indexOf(hour);
@@ -129,62 +149,64 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
 
     onRightNow.currentCSS = getCurrentCSS(onRightNow);
 
-    let whatsOn = [setProgramBlock(onRightNow.currentCSS, onRightNow.id, onRightNow.name)];
+    let whatsOn = [];
 
-    let nextProgramTime
+    let dynamicNextCSS;
 
-    if (onRightNow.hour !== 12) {
-        nextProgramTime = onRightNow.hour + onRightNow.length;
+    console.log(hour + 1 + " is hour + 1")
+
+    if (nextProgram.hour === hour + 1 || hour >= 12 && nextProgram.hour === hour + 1 - 12) {
+        dynamicNextCSS = "block four-to-five"
     } else {
-        nextProgramTime = onRightNow.hour + onRightNow.length - 12;
-    }
-
-    let nextProgram;
-
-    for (let i = 0; i < programs.length; i++) {
-        if (programs[i].hour === nextProgramTime) {
-            nextProgram = programs[i]
+        if (nextProgram.length === .5)
+            dynamicNextCSS = "block three-to-four"
+        else {
+            dynamicNextCSS = "block three-to-five"
         }
     }
 
-    if (ampm === "am") {
-        nextProgram = nP11am;
-    } else {
-        nextProgram = nP11pm;
-    }
+    let oneProgram = whatsOn = [setProgramBlock(onRightNow.currentCSS, onRightNow.id, onRightNow.name)];
 
+    let twoPrograms = whatsOn = [setProgramBlock(onRightNow.currentCSS, onRightNow.id, onRightNow.name),
+    setProgramBlock(dynamicNextCSS, nextProgram.id, nextProgram.name)];
 
+    let threePrograms = whatsOn = [setProgramBlock(onRightNow.currentCSS, onRightNow.id, onRightNow.name),
+    setProgramBlock(dynamicNextCSS, nextProgram.id, nextProgram.name),
+    setProgramBlock(lastProgram.cssLast, lastProgram.id, lastProgram.name)];
 
-    function nPcss() {
-        let css;
-        if (onRightNow.currentCSS === "block two-to-four") {
-            css = "block four-to-five";
-        } else if (onRightNow.currentCSS === "block two-to-three" && nextProgram.length === .5) {
-            css = "block three-to-four"
+    //when the onRightNow is only a half hour long
+    if (hour === onRightNow.timesFirst[0] && onRightNow.length === .5) {
+        if (nextProgram.length >= 1) {
+            whatsOn = twoPrograms
         } else {
-            css = "block three-to-five"
+            whatsOn = threePrograms
         }
-        return css;
-    }
+    } else if (hour === onRightNow.timesFirst[0] && onRightNow.length === 1) {
+        whatsOn = twoPrograms
+    } else if (hour === onRightNow.timesFirst[0] && onRightNow.length > 1) {
+        whatsOn = oneProgram
 
-
-    if (onRightNow.currentCSS !== "block full") {
-        whatsOn.push(setProgramBlock(nPcss(), nextProgram.id, nextProgram.name))
-    }
-
-    let lastProgramTime
-    let lastProgram
-
-    if (nPcss() === "block three-to-four") {
-        lastProgramTime = nextProgram.hour + nextProgram.length;
-        for (let i = 0; i < programs.length; i++) {
-            if (programs[i].hour === lastProgramTime) {
-                lastProgram = programs[i]
+        //if onRightNow has a second index in timesFirst and thats what time it is...
+    } else if (onRightNow.timesFirst[1] && hour === onRightNow.timesFirst[1]) {
+        if (onRightNow.length === 2) {
+            whatsOn = oneProgram
+        } else if (onRightNow.length === 1.5) {
+            whatsOn = twoPrograms
+        } else if (onRightNow.length === 1) {
+            if (nextProgram.length >= 1) {
+                whatsOn = twoPrograms
+            } else {
+                whatsOn = threePrograms
             }
         }
-        whatsOn.push(setProgramBlock("block four-to-five", lastProgram.id, lastProgram.name))
+    } else if ((onRightNow.timesFirst[2] && hour === onRightNow.timesFirst[2]) ||
+        (onRightNow.timesFirst[3] && hour === onRightNow.timesFirst[3])) {
+        if (nextProgram.length >= 1) {
+            whatsOn = twoPrograms
+        } else {
+            whatsOn = threePrograms
+        }
     }
-
 
     //lift up the proper video ID onClick
 
