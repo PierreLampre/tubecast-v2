@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import ProgramBlock from "./ProgramBlock"
 import { Link } from "react-router-dom"
 import "./channel-strip.css"
 
-const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms }) => {
+const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms, animationToggs, setArr }) => {
+
+    const [toggleClass, setToggleClass] = useState(true)
+    const containerRef = useRef();
+
+    useEffect(() => {
+
+        if (animationToggs) {
+            containerRef.current.style.animationPlayState = "running";
+            setToggleClass(true)
+            setArr(true)
+        } else {
+            containerRef.current.style.animationPlayState = "paused";
+            setToggleClass(false)
+            setArr(false)
+        }
+    }, [animationToggs]);
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
@@ -21,9 +37,9 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
 
     //should you want to spoof the clock...do it here
     // //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 3
+    // hour = 8
     // zeroOrThirty = 0
-    // ampm = "pm"
+    // ampm = "am"
 
     if (zeroOrThirty >= 3) {
         hour = hour + .5
@@ -119,8 +135,6 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
         programs = programs.filter(program => program.ampm === ampm)
     }
 
-    console.log(programs)
-
     let onRightNow;
     let onRightNowIndex;
 
@@ -137,10 +151,6 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
     let lastProgramIndex = onRightNowIndex + 2;
     let lastProgram = programs[lastProgramIndex]
 
-    console.log(onRightNow)
-    console.log(nextProgram)
-    console.log(lastProgram)
-
     function getCurrentCSS(obj) {
         let cssIndex = obj.timesFirst.indexOf(hour);
         let currentCSS = "block " + obj.cssFirst[cssIndex];
@@ -153,9 +163,7 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
 
     let dynamicNextCSS;
 
-    console.log(hour + 1 + " is hour + 1")
-
-    if (nextProgram.hour === hour + 1 || hour >= 12 && nextProgram.hour === hour + 1 - 12) {
+    if (nextProgram.hour === hour + 1 || (hour >= 12 && nextProgram.hour === hour + 1 - 12)) {
         dynamicNextCSS = "block four-to-five"
     } else {
         if (nextProgram.length === .5)
@@ -219,7 +227,7 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
     }
 
     return (
-        <div className="channel-strip-container">
+        <div ref={containerRef} className={toggleClass ? "channel-strip-container-scroll" : "channel-strip-container-static"}>
             <Link
                 to="/on-demand"
                 className="name"

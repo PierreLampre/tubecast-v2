@@ -19,6 +19,13 @@
     grid-column: 1 / 2;
 }
 
+.scroll-toggle {
+    padding: 2px;
+    background: var(--channel-bg);
+    color: var( --timestrip-bg);
+    font-weight: bold;
+}
+
 .today-h3 {
     letter-spacing: 1px;
     width: 100%;

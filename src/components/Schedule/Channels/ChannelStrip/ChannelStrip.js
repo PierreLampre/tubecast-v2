@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import ProgramBlock from "./ProgramBlock"
 import { Link } from "react-router-dom"
 import "./channel-strip.css"
 
-const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms }) => {
+const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms, animationToggs }) => {
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
