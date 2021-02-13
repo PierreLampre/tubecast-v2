@@ -19,7 +19,7 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
             setToggleClass(false)
             setArr(false)
         }
-    }, [animationToggs]);
+    }, [animationToggs, setArr]);
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);

@@ -44,9 +44,6 @@ const InfoPanel = ({ yt_id }) => {
         muteNumber = 1
     }
 
-    let compLH = "http://localhost:3000"
-    let phoneLH = "10.0.0.60:3000"
-
     return (
         <div className="info-panel-container">
             <div className="logo">
