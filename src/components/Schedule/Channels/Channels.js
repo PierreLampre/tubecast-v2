@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import NewChannelStrip from "./ChannelStrip/NewChannelStrip"
+import uniqid from "uniqid"
 import "./channels.css";
 
 const Channels = ({ passIdSched, programSchedule, timeDigit,
@@ -11,6 +12,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
     let scrollArr = [
         <NewChannelStrip
             name={programSchedule.blurbs.drama}
+            key={uniqid()}
             schedule={programSchedule.channels.drama}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -22,6 +24,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
+            key={uniqid()}
             schedule={programSchedule.channels.mystery}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -33,6 +36,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
+            key={uniqid()}
             schedule={programSchedule.channels.mst3k}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -44,6 +48,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.foodie}
+            key={uniqid()}
             schedule={programSchedule.channels.foodie}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -55,6 +60,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.collegeRock}
+            key={uniqid()}
             schedule={programSchedule.channels.collegeRock}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -66,6 +72,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.drama}
+            key={uniqid()}
             schedule={programSchedule.channels.drama}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -77,6 +84,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
+            key={uniqid()}
             schedule={programSchedule.channels.mystery}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -88,6 +96,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
+            key={uniqid()}
             schedule={programSchedule.channels.mst3k}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -102,6 +111,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
     let channelsArr = [
         <NewChannelStrip
             name={programSchedule.blurbs.drama}
+            key={uniqid()}
             schedule={programSchedule.channels.drama}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -113,6 +123,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
+            key={uniqid()}
             schedule={programSchedule.channels.mystery}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -124,6 +135,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
+            key={uniqid()}
             schedule={programSchedule.channels.mst3k}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -135,6 +147,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.foodie}
+            key={uniqid()}
             schedule={programSchedule.channels.foodie}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -146,6 +159,7 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.collegeRock}
+            key={uniqid()}
             schedule={programSchedule.channels.collegeRock}
             timeDigit={timeDigit}
             ampm={ampm}
@@ -172,10 +186,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
     function setArr(bool) {
         if (bool) {
             setWhichArr(true)
-            console.log("running")
         } else {
             setWhichArr(false)
-            console.log("running")
         }
     }
 

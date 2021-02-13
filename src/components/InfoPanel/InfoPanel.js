@@ -50,7 +50,7 @@ const InfoPanel = ({ yt_id }) => {
     return (
         <div className="info-panel-container">
             <div className="logo">
-                <a href={compLH || phoneLH}><h1 className="main-logo">Tubecast</h1></a>
+                <a href="https://tubecast.netlify.app/"><h1 className="main-logo">Tubecast</h1></a>
             </div>
             <div className="clock-box">
                 <p>TV Listings</p>

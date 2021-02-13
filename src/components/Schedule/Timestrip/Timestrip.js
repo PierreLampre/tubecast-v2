@@ -47,7 +47,6 @@ const Timestrip = ({ timeDigit, ampm, scrollToggs }) => {
         } else {
             setBtnBool(true)
         }
-        console.log("clicked")
     }
 
 

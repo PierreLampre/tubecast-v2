@@ -82,13 +82,13 @@
 }
 
 @media screen and (max-height: 723px) {
-    .channel-strip-container{
+    .channel-strip-container-scroll, .channel-strip-container-static{
     min-height: 108px;   
     }
 }
 
 @media screen and (max-height: 400px) {
-    .channel-strip-container{
+    .channel-strip-container-scroll, .channel-strip-container-static{
     min-height: 88px;   
     }
 }
