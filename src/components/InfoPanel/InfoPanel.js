@@ -73,8 +73,7 @@ const InfoPanel = ({ yt_id }) => {
                 ></iframe>
             </div>
             <div className="blurb-box">
-                Tristar Products proudly introduces the new Power Smokeless Grill Eric and Denise are back to
-                demonstrate the...
+                Click on program names to load them into the video player.  Click on channel names to view OnDemand programs.
             </div>
             <div className="info-footer-container">
                 <a
