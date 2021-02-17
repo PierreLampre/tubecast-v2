@@ -35,8 +35,6 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
         }
     }, [setArr, scroll]);
 
-    console.log(scroll)
-
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
     let num = name.channelText.slice(0, 3);
