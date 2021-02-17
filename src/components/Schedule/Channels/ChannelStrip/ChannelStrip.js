@@ -21,8 +21,8 @@ const ChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProgra
 
     //should you want to spoof the clock...do it here
     //!!**!!**CHECK THIS BEFORE YOU THINK THE SCHEDULE HAS A BUG **!!**!!
-    // hour = 10
-    // zeroOrThirty = 0
+    // hour = 12
+    // zeroOrThirty = 3
     // ampm = "pm"
 
     //define current programming for channel
