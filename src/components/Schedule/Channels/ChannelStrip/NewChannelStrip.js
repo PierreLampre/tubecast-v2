@@ -1,25 +1,41 @@
 import React, { useState, useRef, useEffect } from 'react'
 import ProgramBlock from "./ProgramBlock"
 import { Link } from "react-router-dom"
+import disableScroll from 'disable-scroll';
 import "./channel-strip.css"
 
-const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms, animationToggs, setArr }) => {
+const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendPrograms, setArr, scroll }) => {
 
     const [toggleClass, setToggleClass] = useState(true)
     const containerRef = useRef();
 
     useEffect(() => {
 
-        if (animationToggs) {
-            containerRef.current.style.animationPlayState = "running";
-            setToggleClass(true)
-            setArr(true)
+        (function () {
+            containerRef.current.style.animation = "moveSlideshow 26s linear infinite;"
+            setToggleClass(true);
+            setArr(true);
+            disableScroll.on();
+        })();
+
+        if (scroll === true) {
+            containerRef.current.style.animation = "moveSlideshow 26s linear infinite;"
+            setToggleClass(true);
+            setArr(true);
+            disableScroll.on();
         } else {
-            containerRef.current.style.animationPlayState = "paused";
-            setToggleClass(false)
-            setArr(false)
+            containerRef.current.style.animation = "none;"
+            setToggleClass(false);
+            setArr(false);
+            disableScroll.off();
         }
-    }, [animationToggs, setArr]);
+
+        return function () {
+            disableScroll.off();
+        }
+    }, [setArr, scroll]);
+
+    console.log(scroll)
 
     //get the channel name and digits
     let end = parseInt(name.channelText.length);
@@ -224,6 +240,7 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
 
     function sendThePrograms(arr) {
         sendPrograms(arr);
+        disableScroll.off();
     }
 
     return (

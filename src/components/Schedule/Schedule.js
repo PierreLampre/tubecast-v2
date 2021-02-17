@@ -6,7 +6,6 @@ import OnDemand from "./OnDemand/OnDemand.js";
 import EpisodeLibrary from "./OnDemand/EpisodeLibrary/EpisodeLibrary"
 import moment from "moment";
 import channelStrings from "../../channelStrings.json"
-import disableScroll from 'disable-scroll';
 import "./schedule.css";
 
 const Schedule = (props) => {
@@ -21,8 +20,7 @@ const Schedule = (props) => {
 
     const [onDemandPrograms, setOnDemandPrograms] = useState([]);
     const [episodeList, setEpisodeList] = useState(null);
-    const [scrollToggle, setScrollToggle] = useState(true);
-    const [animationToggle, setAnimationToggle] = useState(true);
+    const [scroll, setScroll] = useState(true)
 
     useEffect(() => {
         let timerID = setInterval(() => tick(), 1000);
@@ -60,21 +58,7 @@ const Schedule = (props) => {
         setEpisodeList(obj);
     }
 
-    function scrollToggs() {
-        if (scrollToggle) {
-            setScrollToggle(false)
-            setAnimationToggle(false)
-        } else {
-            setScrollToggle(true)
-            setAnimationToggle(true)
-        }
-    }
-
-    if (scrollToggle) {
-        disableScroll.on()
-    } else {
-        disableScroll.off()
-    }
+    console.log(scroll)
 
     return (
         <div className="schedule-container">
@@ -85,7 +69,7 @@ const Schedule = (props) => {
                             <Timestrip
                                 timeDigit={timeDigit}
                                 ampm={ampm}
-                                scrollToggs={scrollToggs}
+                                setScroll={setScroll}
                             />
                             <Channels
                                 timeDigit={timeDigit}
@@ -93,7 +77,7 @@ const Schedule = (props) => {
                                 programSchedule={programSchedule}
                                 passIdSched={passId}
                                 passOnDemandPrograms={passOnDemandPrograms}
-                                animationToggs={animationToggle}
+                                scroll={scroll}
                             />
                         </div>
                     </Route>

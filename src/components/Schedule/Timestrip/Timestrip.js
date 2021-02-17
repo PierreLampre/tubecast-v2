@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import "./timestrip.css";
 
-const Timestrip = ({ timeDigit, ampm, scrollToggs }) => {
+const Timestrip = ({ timeDigit, ampm, setScroll }) => {
 
-    const [btnBool, setBtnBool] = useState(true);
+    const [btnName, setBtnName] = useState("STOP")
 
     let hourDigit;
     let shortAP = ampm.slice(0, 1);
@@ -33,31 +33,24 @@ const Timestrip = ({ timeDigit, ampm, scrollToggs }) => {
         }
     }
 
-    let btnProps = {
-        init: "STOP",
-        alternate: "AUTOSCROLL"
-    }
-
-    function toggleButtonString(bool) {
-
-        scrollToggs();
-
-        if (bool === true) {
-            setBtnBool(false)
+    function btnToggle() {
+        if (btnName === "STOP") {
+            setBtnName("AUTOSCROLL");
+            setScroll(false);
         } else {
-            setBtnBool(true)
+            setBtnName("STOP");
+            setScroll(true);
         }
     }
-
 
     return (
         <div className="timestrip-container">
             <div className="txt-box today">
                 <button
                     className="scroll-toggle"
-                    onClick={() => toggleButtonString(btnBool)}
+                    onClick={() => btnToggle()}
                 >
-                    {btnBool ? btnProps.init : btnProps.alternate}</button>
+                    {btnName}</button>
             </div>
             <div className="txt-box time-1">
                 <h3 className="today-h3">{hourDigit}:{first_zeroesOrThirty}{shortAP}</h3>

@@ -4,8 +4,7 @@ import uniqid from "uniqid"
 import "./channels.css";
 
 const Channels = ({ passIdSched, programSchedule, timeDigit,
-    ampm, toggleTheView, passOnDemandPrograms,
-    animationToggs }) => {
+    ampm, toggleTheView, passOnDemandPrograms, scroll }) => {
 
     const [whichArr, setWhichArr] = useState(true);
 
@@ -19,8 +18,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
@@ -31,8 +30,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
@@ -43,8 +42,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.foodie}
@@ -55,8 +54,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.collegeRock}
@@ -67,8 +66,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.drama}
@@ -79,8 +78,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
@@ -91,8 +90,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
@@ -103,8 +102,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />
     ]
 
@@ -118,8 +117,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mystery}
@@ -130,8 +129,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.mst3k}
@@ -142,8 +141,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.foodie}
@@ -154,8 +153,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />,
         <NewChannelStrip
             name={programSchedule.blurbs.collegeRock}
@@ -166,8 +165,8 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             passIdChann={passIdChann}
             toggleTheView={toggleTheViewChann}
             sendPrograms={sendProgramsChann}
-            animationToggs={animationToggs}
             setArr={setArr}
+            scroll={scroll}
         />
     ]
 
