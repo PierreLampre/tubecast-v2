@@ -104,6 +104,18 @@ const Channels = ({ passIdSched, programSchedule, timeDigit,
             sendPrograms={sendProgramsChann}
             setArr={setArr}
             scroll={scroll}
+        />,
+        <NewChannelStrip
+            name={programSchedule.blurbs.foodie}
+            key={uniqid()}
+            schedule={programSchedule.channels.foodie}
+            timeDigit={timeDigit}
+            ampm={ampm}
+            passIdChann={passIdChann}
+            toggleTheView={toggleTheViewChann}
+            sendPrograms={sendProgramsChann}
+            setArr={setArr}
+            scroll={scroll}
         />
     ]
 

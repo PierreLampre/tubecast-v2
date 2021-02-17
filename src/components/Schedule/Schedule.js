@@ -58,8 +58,6 @@ const Schedule = (props) => {
         setEpisodeList(obj);
     }
 
-    console.log(scroll)
-
     return (
         <div className="schedule-container">
             <BrowserRouter>
