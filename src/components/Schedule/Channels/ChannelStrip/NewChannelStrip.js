@@ -16,6 +16,7 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
             setToggleClass(true);
             setArr(true);
             disableScroll.on();
+            console.log("mounted")
         })();
 
         if (scroll === true) {
@@ -24,7 +25,6 @@ const CRChannelStrip = ({ name, schedule, timeDigit, ampm, passIdChann, sendProg
             setArr(true);
             disableScroll.on();
         } else {
-            containerRef.current.style.animation = "none;"
             setToggleClass(false);
             setArr(false);
             disableScroll.off();

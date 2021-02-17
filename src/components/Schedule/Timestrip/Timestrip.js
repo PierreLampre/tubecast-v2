@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./timestrip.css";
 
-const Timestrip = ({ timeDigit, ampm, setScroll }) => {
+const Timestrip = ({ timeDigit, ampm, setScroll, scroll }) => {
 
     const [btnName, setBtnName] = useState("STOP")
 
     let hourDigit;
     let shortAP = ampm.slice(0, 1);
     let first_zeroesOrThirty;
+
+    useEffect(() => {
+        setScroll(true);
+    }, [setScroll])
 
     //logic to make sure UI displays right time blocks at 
     //every possible time.
