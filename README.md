@@ -11,4 +11,4 @@ Each channel block is a link to the that channel's OnDemand screen.  When clicke
 ![channel-block](https://github.com/PierreLampre/tubecast-v2/blob/master/ref_imgs/channel-block.png?raw=true)
 ![on-demand-screen](https://github.com/PierreLampre/tubecast-v2/blob/master/ref_imgs/on-demand-screen.png?raw=true)
 
-Tubecast is built with React and uses the pkgs moment.js and disable-scroll.
+Tubecast is built with React and uses the pkgs moment.js, react-router-dom, and disable-scroll.
