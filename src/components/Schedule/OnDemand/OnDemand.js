@@ -11,14 +11,17 @@ const OnDemand = ({ programs, passId, passEpisodeList }) => {
     let programsLeft = [];
     let programsRight = [];
 
+    // get just the program names
     for (let i = 0; i < programs.length; i++) {
         justTheNames.push(programs[i].name);
     }
 
+    //remove duplicate names
     let uniqueNames = [...new Set(justTheNames)];
 
     uniqueNames = uniqueNames.sort();
 
+    //create shell objects
     uniqueProgramObjects = uniqueNames.map(name => (
         {
             "name": name,
@@ -26,6 +29,7 @@ const OnDemand = ({ programs, passId, passEpisodeList }) => {
         }
     ))
 
+    //put all programs ids in the shell objects with matching name.
     for (let i = 0; i < programs.length; i++) {
         for (let j = 0; j < uniqueProgramObjects.length; j++) {
             if (programs[i].name === uniqueProgramObjects[j].name) {
@@ -42,6 +46,7 @@ const OnDemand = ({ programs, passId, passEpisodeList }) => {
         passEpisodeList(obj)
     }
 
+    //build components
     for (let i = 0; i < uniqueProgramObjects.length; i++) {
         programComponents.push(
             <OnDemandButton
@@ -54,6 +59,7 @@ const OnDemand = ({ programs, passId, passEpisodeList }) => {
         );
     }
 
+    //make two rows of them
     for (let i = 0; i < programComponents.length; i++) {
         //evens
         if (i % 2 === 0) {
