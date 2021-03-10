@@ -241,6 +241,7 @@
     .commercial {
         grid-row: 2 / 8;
         grid-column: 1 / 13;
+        min-width: 311px;
     }
 
     .logo {
